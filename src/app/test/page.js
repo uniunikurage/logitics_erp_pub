@@ -1,3 +1,5 @@
+import style from './test.module.css'
+
 export default function page() {
     return(
         <div className={style.container}>
@@ -20,8 +22,8 @@ export default function page() {
 
             <div className={style.right}>
             
-                <img src="" className={`${style.imgIcon}` `${style.bellIcon}`}></img>
-                <div className={style.}>
+                {/* <img src="" className={`${style.imgIcon}` `${style.bellIcon}`}></img> */}
+                <div>
                     <span className={style.name}>홍</span>
                     <span className={style.fullname}>홍길동</span>
                 </div>
