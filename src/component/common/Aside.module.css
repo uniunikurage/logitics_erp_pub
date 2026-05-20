@@ -103,7 +103,7 @@
     border: solid #D1D5DB 1px;
     border-radius: 6px;
     font-size: 13px;
-    gap: 6px;    
+    gap: 6px;
 }
 .downloadBtn img{
     width: 10px;
@@ -113,7 +113,6 @@
 .mainBtn{
     display: flex;
     gap: 8px;
-    height: 24px;
 }
 
 .newloadBtn{

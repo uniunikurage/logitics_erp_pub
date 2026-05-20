@@ -39,7 +39,7 @@
 
 .sideBar{
     width: 210px;
-    height: 884px;
+    height: 883px;
     background: #1E293B;
 }
 
@@ -87,51 +87,6 @@
     margin-top: 2px;
     width: 12px;
     height: 12px;   
-}
-
-.mainHeader{
-    display: flex;
-    justify-content: space-between;
-}
-
-.downloadBtn{
-    display: flex;
-    padding: 9px 14px;
-    background-color: white;
-    color: #162032;
-    cursor: pointer;
-    border: solid #D1D5DB 1px;
-    border-radius: 6px;
-    font-size: 13px;
-    gap: 6px;    
-}
-.downloadBtn img{
-    width: 10px;
-    height: 10px;
-}
-
-.mainBtn{
-    display: flex;
-    gap: 8px;
-    height: 24px;
-}
-
-.newloadBtn{
-    display: flex;
-    padding: 9px 14px;
-    background-color:#1B3A6B;
-    color: white;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 13px;
-    gap: 6px;
-    font-weight: bold;    
-}
-
-.newloadBtn img{
-    width: 10px;
-    height: 10px;
-    margin-top: 5px;
 }
 
 .mainTitle{
