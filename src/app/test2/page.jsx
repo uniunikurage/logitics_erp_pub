@@ -91,9 +91,11 @@ export default function page() {
              
 
                     <div className={s.searchBar}>
-                        <span><img/>
-                        검색조건</span>
-                        
+                        <div className={s.searchTitle}>
+                            <img src="/images/Search.png" alt="" />
+                            <span>검색조건</span>
+                        </div> 
+
                         <div className={s.searchFilter}>
 
                             <div className={s.filterGroup}>
@@ -103,7 +105,7 @@ export default function page() {
 
                             <div className={s.filterGroup}>
                                 <label htmlFor="dept">부서</label>
-                                    <select id="dept">
+                                    <select id="dept" className={s.selectOption}>
                                         <option value="">전체</option>
                                         <option value="hr">인사팀</option>
                                         <option value="dev">개발팀</option>
@@ -111,13 +113,39 @@ export default function page() {
                             </div>
                             <div className={s.filterGroup}>
                                 <label htmlFor="rank">직급</label>
-                                    <select id="rank">
+                                    <select id="rank" className={s.selectOption}>
                                         <option value="">전체</option>
                                         <option value="staff">사원</option>
                                         <option value="assistantManager">대리</option>
                                         <option value="Manager">과장</option>
                                     </select>
-                                </div>
+                            </div>
+
+                            <div className={s.filterGroup}>
+                                <label htmlFor="rank">재직상태</label>
+                                    <select id="rank" className={s.selectOption}>
+                                        <option value="">전체</option>
+                                        <option value="work">재직중</option>
+                                        <option value="rest">휴직중</option>
+                                    </select>
+                            </div>
+
+                        <div className={s.mainBtn}>                            
+                            
+                            <button type="button" className={s.loadBtn}>
+                                <img src="/images/Search_w.png" alt="" />
+                                <span>조회</span>
+                            </button>
+
+                            <button type="button" className={s.resetBtn}>
+                                <img src="/images/Rotate Ccw.png" alt="" />
+                                <span>초기화</span>
+                                
+                            </button>
+
+
+                        </div>
+
                         </div>
 
 
