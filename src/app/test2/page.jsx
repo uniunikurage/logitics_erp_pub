@@ -7,23 +7,32 @@ import Nav from "@/component/common/Nav";
 import Aside from "@/component/common/Aside";
 import { Input } from "@/components/ui/input";
 
-export default function page() {
+export default function Page() {
   const [employees, setEmployees] = useState([]);
+  const [keyword, setKeyword] = useState();
 
-  useEffect(() => {
-    //1. api를 요청해서 받는다.
-    const getEmployee = async () => {
-      const response = await baseApi.get("/api/v1/employees");
-      console.log(response.data.data);
+  // useEffect(() => {
+  //   //1. api를 요청해서 받는다.
+  //   const getEmployee = async () => {
+  //     const response = await baseApi.get("/api/v1/employees");
+  //     console.log(response.data.data);
 
-      //2. useState 넣는다.
-      setEmployees(response.data.data);
+  //     //2. useState 넣는다.
+  //     setEmployees(response.data.data);
 
-      //3. useState에 있는 데이터를 렌더링 시킨다.
-    };
+  //     //3. useState에 있는 데이터를 렌더링 시킨다.
+  //   };
 
-    getEmployee();
-  }, []);
+  //   getEmployee();
+  // }, []);
+
+  const 직원조회하기 = () => {
+    console.log(keyword);
+  };
+
+  const getEmployees = async () => {
+    const res = await baseApi;
+  };
 
   return (
     <div className={s.container}>
@@ -91,7 +100,11 @@ export default function page() {
               <div className={s.searchFilter}>
                 <div className={s.filterGroup}>
                   <label htmlFor="epNum">사원번호</label>
-                  <input type="text" placeholder="전체" />
+                  <input
+                    type="text"
+                    placeholder="전체"
+                    onChange={(e) => setKeyword(e.target.value)}
+                  />
                 </div>
 
                 <div className={s.filterGroup}>
@@ -122,7 +135,11 @@ export default function page() {
                 </div>
 
                 <div className={s.mainBtn}>
-                  <button type="button" className={s.loadBtn}>
+                  <button
+                    type="button"
+                    className={s.loadBtn}
+                    onClick={() => 직원조회하기()}
+                  >
                     <img src="/images/Search_w.png" alt="" />
                     <span>조회</span>
                   </button>
@@ -199,7 +216,7 @@ export default function page() {
                 <li>010-5555-7777</li>
                 <li>park@company.com</li>
                 <li>
-                  <span className={s.resting}>휴직중</span>
+                  <span className={s.rest}>휴직중</span>
                 </li>
                 <li>
                   <button className={s.editBtn}>수정</button>

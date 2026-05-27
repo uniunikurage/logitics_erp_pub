@@ -1,0 +1,235 @@
+
+.container{
+    width: 1440px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color:#1B3A6B;
+}
+
+.pageWrapper {
+    display: flex;
+    width: 1440px;
+    height: 844px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.left{
+    display: flex;
+    gap: 54px;
+}
+
+.logoWrapper{
+    padding: 18px 54px;
+    color: white;
+
+}
+
+.menuWrapper{
+    display: flex;
+    padding: 19.5px 22px;
+    gap: 44px;
+    color:#93C5FD;
+}
+
+.right{ 
+    display: flex;
+    color: white;
+    padding: 20px 54px;
+    gap: 10px;
+}
+
+.HrContainer{
+    width: 660px;
+    height: 844px;
+    background: linear-gradient(to left,#0F2547,#1E40AF);
+    padding-top: 151px;
+    font: 12px;
+}
+
+.HrContainer span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.logoContainer{
+    margin-top: 20px;
+    display: grid;
+    width: 184px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: 240px;
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+}
+
+.logo{
+  font-size: 12px;
+  color: #93C5FD;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.main{
+    font-size: 38px;
+    color: #fff;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub{
+    font-size: 38px;
+    color: #60A5FA;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{
+    padding-top: 5px;
+    gap: 10px;
+    color:#BFDBFE;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+
+.bigText{
+    padding-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.smallText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    font-size: 12px;
+    color: #93C5FD;
+}
+
+.boxContainer{ 
+    margin-top: 20px;
+    display: grid;
+    width: 532px;
+    height: 66px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: 64px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.imageBox{
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.imageBox img{
+
+}
+
+.textGroup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.HrBigtext{
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.HrSmalltext{
+    font-size: 12px;
+    color:#BFDBFE;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    width: 780px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+.log{
+    display: flex;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.logSmall{
+    font-size: 15px;
+    color: #6B7280;
+}
+
+.loginInputGroup span{
+
+}
+
+.loginInputGroup{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+    border: 1px solid #D1D5DB;
+    border-radius: 16px;
+
+}
+
+.loginOp{
+    display: grid;
+    padding-top: 10px;
+}
+
+.loginBtn{
+    width: 400px;
+    height: 50px;
+    background-color: #1E3A5F;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.loginKakao{
+    width: 400px;
+    height: 60px;
+    background-color: #F9e000;
+    border-radius: 10px;
+}
+
+.sign{
+    padding-top:18px ;
+}
+.noAccount{
+   color: #6B7280;
+   padding-right: 6px;
+}
+
+.signUp{
+    color: #2563EB;
+    font-weight: bold;
+}
