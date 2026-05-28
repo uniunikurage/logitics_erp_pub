@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import s from "./test2.module.css";
+import s from "./login.module.css";
 import baseApi from "@/baseApi";
 import Nav from "@/component/common/Nav";
 import Aside from "@/component/common/Aside";
@@ -32,6 +32,12 @@ export default function Page() {
 
   const getEmployees = async () => {
     const res = await baseApi;
+  };
+
+  const [loginInfo, setLoginInfo] = useState();
+
+  const goLogin = async () => {
+    await baseApi.post("/api/v1/employees/login", loginInfo);
   };
 
   return (
@@ -106,6 +112,9 @@ export default function Page() {
               type="text"
               id="email"
               placeholder="이메일 주소를 입력하세요"
+              onChange={(e) =>
+                setLoginInfo((prev) => ({ ...prev, email: e.target.value }))
+              }
             />
           </div>
 
@@ -115,13 +124,20 @@ export default function Page() {
               type="password"
               id="pw"
               placeholder="비밀번호를 입력하세요"
+              onChange={(e) =>
+                setLoginInfo((prev) => ({ ...prev, password: e.target.value }))
+              }
             />
           </div>
 
           <div className={s.loginOp}>
-            <button className={s.loginBtn}>로그인</button>
+            <button className={s.loginBtn} onClick={() => goLogin()}>
+              로그인
+            </button>
             <span className={s.or}>또는</span>
-            <button className={s.loginKakao}>카카오 로그인</button>
+            <button className={s.loginKakao}>
+              <img src="/images/kakao_login.png" alt="" />
+            </button>
           </div>
           <div className={s.sign}>
             <span className={s.noAccount}>계정이 없으신가요?</span>
