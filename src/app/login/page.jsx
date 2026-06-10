@@ -6,8 +6,10 @@ import baseApi from "@/baseApi";
 import Nav from "@/component/common/Nav";
 import Aside from "@/component/common/Aside";
 import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
   const [employees, setEmployees] = useState([]);
   const [keyword, setKeyword] = useState();
 
@@ -31,13 +33,34 @@ export default function Page() {
   };
 
   const getEmployees = async () => {
-    const res = await baseApi;
+    const res = await baseApi.get("/api/v1/employees", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      params: {
+        keyword: keyword || "",
+        page: 1,
+      },
+    });
+    console.log(res.data.data);
   };
 
   const [loginInfo, setLoginInfo] = useState();
 
   const goLogin = async () => {
-    await baseApi.post("/api/v1/employees/login", loginInfo);
+    try {
+      const res = await baseApi.post("/api/v1/employees/login", loginInfo);
+      const token = res.data.data.accessToken;
+
+      if (token) {
+        localStorage.setItem("accessToken", res.data.data.accessToken);
+        router.push("/test2");
+      } else {
+        alert("로그인 실패");
+      }
+    } catch (e) {
+      console.error("로그인 네트워크 실패 ", e);
+    }
   };
 
   return (

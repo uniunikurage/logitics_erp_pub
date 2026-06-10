@@ -5,7 +5,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  background-color: #1B3A6B;
+  background-color: #1b3a6b;
 }
 
 .left {
@@ -22,7 +22,7 @@
   display: flex;
   padding: 19.5px 22px;
   gap: 44px;
-  color: #93C5FD;
+  color: #93c5fd;
 }
 
 .right {
@@ -34,31 +34,31 @@
 
 .contentContainer {
   display: flex;
-  background-color: #F1F5F9;
+  background-color: #f1f5f9;
 }
 
 .sideBar {
   width: 210px;
   height: 884px;
-  background: #1E293B;
+  background: #1e293b;
 }
 
 .sideContainer {
   width: 210px;
   display: grid;
-  background: #1E293B;
+  background: #1e293b;
   color: white;
 }
 
 .sideContainer li {
   padding: 10px 44px;
   font-size: 12px;
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 .sideTitle {
   background: #162032;
-  color: #60A5FA;
+  color: #60a5fa;
   width: 210px;
   height: 40px;
   font-weight: bold;
@@ -73,7 +73,7 @@
 
 .homeIconWrapper {
   display: flex;
-  color: #6B7280;
+  color: #6b7280;
   padding: 21.5px 22.5px;
   gap: 10.5px;
   font-size: 12px;
@@ -96,7 +96,7 @@
   background-color: white;
   color: #162032;
   cursor: pointer;
-  border: solid #D1D5DB 1px;
+  border: solid #d1d5db 1px;
   border-radius: 6px;
   font-size: 13px;
   gap: 6px;
@@ -107,7 +107,7 @@
   display: flex;
   width: 10px;
   height: 10px;
-  margin-top: -6px; 
+  margin-top: -6px;
 }
 
 .mainBtn {
@@ -119,7 +119,7 @@
 .newloadBtn {
   display: flex;
   padding: 16px 20px;
-  background-color: #1B3A6B;
+  background-color: #1b3a6b;
   color: white;
   cursor: pointer;
   border-radius: 6px;
@@ -147,7 +147,7 @@
 }
 
 .mainTitle p {
-  color: #6B7280;
+  color: #6b7280;
 }
 
 .searchTitle {
@@ -165,7 +165,7 @@
 
 .searchTitle span {
   font-weight: bold;
-  color: #1B3A6B;
+  color: #1b3a6b;
   font-size: 13px;
 }
 
@@ -175,7 +175,7 @@
   background-color: white;
   display: flex;
   margin: 0 auto;
-  border: solid 1px #D1D5DB;
+  border: solid 1px #d1d5db;
   border-radius: 6px;
   flex-direction: column;
   gap: 20px;
@@ -188,7 +188,7 @@
 
 .filterGroup label {
   color: #374151;
-  background-color: #F1F5F9;
+  background-color: #f1f5f9;
   width: 72px;
   height: 38px;
   border-radius: 6px 0px 0px 6px;
@@ -197,13 +197,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
 }
 
 .filterGroup input {
   display: flex;
   text-align: center;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   padding: 8px;
   font-size: 13px;
 }
@@ -218,7 +218,7 @@
 }
 
 .filterGroup option {
-  border: solid 1px #D1D5DB;
+  border: solid 1px #d1d5db;
   border-radius: 6px;
   font-size: 13px;
   width: 120px;
@@ -226,7 +226,7 @@
 
 .loadBtn {
   display: flex;
-  background-color: #1B3A6B;
+  background-color: #1b3a6b;
   align-items: center;
   color: #fff;
   gap: 6px;
@@ -245,9 +245,9 @@
   background-color: #fff;
   align-items: center;
   gap: 6px;
-  color: #1B3A6B;
+  color: #1b3a6b;
   border-radius: 6px;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   font-size: 13px;
   padding: 17px;
 }
@@ -258,32 +258,32 @@
 }
 
 .selectOption {
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
-  color: #9CA3AF;
+  color: #9ca3af;
   padding: 9px 86px 9px 12px;
 }
 
 .Now {
-  color: #2563EB;
+  color: #2563eb;
 }
 
 .secondTitle {
   display: flex;
   gap: 10px;
-  color: #1B3A6B;
+  color: #1b3a6b;
   font-size: 14px;
   font-weight: bold;
 }
 
 .subText {
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: 12px;
   font-weight: 400;
 }
 
 .red {
-  color: #EF4444;
+  color: #ef4444;
   margin-right: 4px;
 }
 
@@ -297,7 +297,7 @@
   width: 100%;
   max-width: 1190px;
   height: 46px;
-  background-color: #F8FAFC;
+  background-color: #f8fafc;
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
@@ -318,7 +318,7 @@
   max-width: 1190px;
   height: 210px;
   background-color: white;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
   border-radius: 0 0 8px 8px;
   padding: 0 20px;
 }
@@ -328,8 +328,8 @@
   width: 278.5px;
   height: 170px;
   border-radius: 10px;
-  background-color: #EFF6FF;
-  border: 2px solid #2563EB;
+  background-color: #eff6ff;
+  border: 2px solid #2563eb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,7 +341,7 @@
   height: 170px;
   border-radius: 10px;
   background-color: white;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -355,7 +355,7 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  background-color: #DBEAFE;
+  background-color: #dbeafe;
   border-radius: 10px;
 }
 
@@ -367,7 +367,7 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  background-color: #F1F5F9;
+  background-color: #f1f5f9;
   border-radius: 10px;
 }
 
@@ -386,7 +386,7 @@
 }
 
 .optionSub {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 12px;
   display: flex;
   justify-content: center;
@@ -394,7 +394,7 @@
 }
 
 .subTwo {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 12px;
   display: flex;
   justify-content: center;
@@ -403,7 +403,7 @@
 
 .check {
   display: flex;
-  background-color: #2563EB;
+  background-color: #2563eb;
   width: 74px;
   height: 22px;
   border-radius: 50px;
@@ -417,11 +417,11 @@
 
 .checking {
   display: flex;
-  background-color: #F1F5F9;
+  background-color: #f1f5f9;
   width: 74px;
   height: 22px;
   border-radius: 50px;
-  color: #9CA3AF;
+  color: #9ca3af;
   font-weight: bold;
   cursor: pointer;
   font-size: 11px;
@@ -429,45 +429,45 @@
   align-items: center;
 }
 
-.secondboxWrapper{
+.secondboxWrapper {
   width: 1190px;
   height: 450px;
   background: white;
 }
 
-.InProgress img{
-    margin-left: 900px;
-}
-
-
-.InProgress{
+.InProgress {
   display: flex;
-  color: #1D4ED8;
+  color: #1d4ed8;
   width: 136px;
   height: 23px;
-  background-color: #DBEAFE;
+  background-color: #dbeafe;
   border-radius: 50px;
   font-size: 12px;
-    margin-left: 900px;
+  margin-left: 900px;
   justify-content: center;
   align-items: center;
 }
 
-.info{
-  color: #1B3A6B;
+.info {
+  color: #1b3a6b;
   font-weight: bold;
 }
 
-.info{
-  color:#1B3A6B;
+.info {
+  color: #1b3a6b;
   font-weight: bold;
-  padding:12px 40px;
-  border-left: 3px solid #1B3A6B;
-  padding: 0 0 0 8px; 
+  padding: 12px 40px;
+  border-left: 3px solid #1b3a6b;
+  padding: 0 0 0 8px;
   margin-left: 20px;
-  border-radius: 2px; 
+  border-radius: 2px;
 }
 .infoTitle {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
+.form {
+  display: flex;
+  gap: 15px; /* 1. 항목끼리 서로 안 붙게 간격 주기 */
+  align-items: flex-end; /* 2. 라벨과 입력창 높낮이 아래로 맞추기 */
+}

@@ -11,20 +11,29 @@ export default function Page() {
   const [employees, setEmployees] = useState([]);
   const [keyword, setKeyword] = useState();
 
-  // useEffect(() => {
-  //   //1. api를 요청해서 받는다.
-  //   const getEmployee = async () => {
-  //     const response = await baseApi.get("/api/v1/employees");
-  //     console.log(response.data.data);
+  // 화면이 로드되자마자 실행됨
+  useEffect(() => {
+    //1. api를 요청해서 받는다.
+    const getEmployee = async () => {
+      // 로그인 떄 저장한 토큰 가져옴
+      const token = localStorage.getItem("accessToken");
 
-  //     //2. useState 넣는다.
-  //     setEmployees(response.data.data);
+      // api 호출함
+      const response = await baseApi.get("/api/v1/employees", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log(response.data.data);
 
-  //     //3. useState에 있는 데이터를 렌더링 시킨다.
-  //   };
+      //2. useState 넣는다.
+      setEmployees(response.data.data);
 
-  //   getEmployee();
-  // }, []);
+      //3. useState에 있는 데이터를 렌더링 시킨다.
+    };
+
+    getEmployee();
+  }, []);
 
   const 직원조회하기 = () => {
     console.log(keyword);
@@ -165,6 +174,29 @@ export default function Page() {
                 <li>재직상태</li>
                 <li>관리</li>
               </ul>
+
+              {employees.map((item, idx) => (
+                <>
+                  <ul className={s.row}>
+                    <li>{idx}</li>
+                    <li>{item.employeeId}</li>
+                    <li>
+                      <strong>{item.name}</strong>
+                    </li>
+                    <li>인사팀</li>
+                    <li>팀장</li>
+                    <li>2019.03.02</li>
+                    <li>010-1234-5678</li>
+                    <li>kim@company.com</li>
+                    <li>
+                      <span className={s.working}>재직중</span>
+                    </li>
+                    <li>
+                      <button className={s.editBtn}>수정</button>
+                    </li>
+                  </ul>
+                </>
+              ))}
 
               <ul className={s.row}>
                 <li>1</li>

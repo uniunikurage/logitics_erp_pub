@@ -135,6 +135,42 @@ export default function Page() {
                   <span className={s.info}>신청자 정보</span>
                 </div>
               </div>
+              <form>
+                <div>
+                  <label>사원번호</label>
+                  <input type="text" placeholder="사원번호를 입력하세요" />
+                </div>
+
+                <div>
+                  <label>성명</label>
+                  <input type="text" placeholder="이름을 입력하세요" />
+                </div>
+
+                <div>
+                  <label>부서</label>
+                  <select>
+                    <option value="">부서 선택</option>
+                    <option value="hr">인사팀</option>
+                    <option value="dev">개발팀</option>
+                    <option value="sales">영업팀</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label>직급</label>
+                  <select>
+                    <option value="">직급 선택</option>
+                    <option value="staff">사원</option>
+                    <option value="manager">대리</option>
+                    <option value="senior">과장</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label>입사일</label>
+                  <input type="date" />
+                </div>
+              </form>
             </div>
           </div>
         </div>
