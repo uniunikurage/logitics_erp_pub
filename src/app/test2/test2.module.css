@@ -213,18 +213,6 @@
 }
 
 
-/* input::placeholder{
-    border: solid 1px #D1D5DB;
-    border-radius: 6px;
-    font-size: 13px; 
-    
-} */
-
-/* input:focus {
-    border: none;
-    opacity: 0;
-} */
-
 .filterGroup {
     display: flex;
     gap: 5px;
@@ -425,5 +413,6 @@
     justify-content: center;
     align-items: center;
 }
+
 
 

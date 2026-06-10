@@ -71,8 +71,10 @@
 
 .mainContainer{
     display: flex;
+    flex: 1;
     width: 100%;
     background: #F1F5F9;
+    min-height: 100vh;
 
 }
 
@@ -135,7 +137,6 @@
     font-weight: bold;    
     line-height: 1px;
     margin-right: 20px;
-    
 }
 
 .newloadBtn img{
@@ -151,6 +152,7 @@
 
 .mainBar{
     width: 100%;
+    padding: 0 24px 24px 24px;
 
 
 }
@@ -186,7 +188,7 @@
 
 
 .searchBar{
-    width: 1190px;
+    width: 100%;
     background-color: white; 
     display: flex;
     margin: 0 auto;
@@ -194,15 +196,17 @@
     border-radius: 6px;
     display: flex;
     flex-direction: column; 
-    gap: 20px;    
+    gap: 20px;   
+    padding-bottom: 16px;
+    box-sizing: border-box; 
 }
 
 .searchFilter {
     display: flex;   
-    gap: 16;
+    gap: 16px;
     margin-left: 16px;
     font-weight: bold;
-    width: 100%;
+   align-items: flex-end;
 }
 
 
@@ -211,58 +215,56 @@
     color: #1B3A6B;
     font-weight: bold;
     font-size: 13px;
+    
 }
 .filterGroup input {
     display:grid;
     border: 1px solid #D1D5DB;
-    padding: 8px;
+;
     border-radius: 5px;
     font-size: 13px;
-}
-
-
-/* input::placeholder{
-    border: solid 1px #D1D5DB;
-    border-radius: 6px;
-    font-size: 13px; 
     
-} */
-
-/* input:focus {
-    border: none;
-    opacity: 0;
-} */
+}
 
 .filterGroup {
-    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 12px;
     align-items: center;
     margin-bottom: 16px;
-    font-size: 13px;
-
+    font-size: 13px;  
 }
+
+.checkOption {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+padding-top: 10px;
+}
+
+/* 제목 한 줄 스타일 */
+.optionTitle {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* 글자와 빨간 별 사이의 간격 */
+}
+
 
 
 .filterGroup option{
     border: solid 1px #D1D5DB;
     border-radius: 6px;
     font-size: 13px;
-    width: 120px;    
+    width: 120px; 
+    gap: 10px;
+     
 }
 
+.searchContainer{
+     border-bottom: 1px solid #F1F5F9; 
+    padding-bottom: 18px;  
+}
 .loadBtn{
-/*     display: flex;
-    padding: 16px 20px;
-    background-color:#1B3A6B;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 13px;
-    gap: 6px;
-    font-weight: bold;    
-    line-height: 1px;
-    margin-right: 20px;
-    margin-bottom: 10px; */
-
-
     display: flex;
     background-color: #1B3A6B;
     align-items: center;
@@ -412,7 +414,6 @@
     font-weight: 400;
     color:#6B7280;
     padding-top: 2px;
-;
 }
 
 .pageList li:hover{
@@ -428,29 +429,444 @@
 }
 
 .applyPerson{
-    width: 1100px;
-    height: 500px;
+    width: 1190px;
+    height: 800px;
     background: white;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .secondTitle{
 padding-left: 25px;
 font-size: 14px;
-font-weight: bold;
 color:#1B3A6B;
-padding-bottom: 14.5px;
+padding: 10px;
+width: 1190px;
+
+background-color: #F8FAFC;
+align-items: center;
+display: flex;
+
 }
 
-.applyPerson p{
+.applyInfo{
     color:#1B3A6B;
     font-weight: bold;
-    padding:20px 31px;
+    padding:12px 40px;
+
+  border-left: 3px solid #1B3A6B;
+  padding: 0 0 0 8px; 
+  margin-left: 20px;
+  border-radius: 2px; 
+   
+}
+.searchContainer{
+    padding-left: 20px;
+    padding-bottom: 12px;
+    display: flex;
+    flex: 1;
+}
+
+.checkOption{
+    padding-top: 18px;
+
+}
+
+.EventOption{
+
+    color: #1B3A6B;
+    font-weight: bold;
+    border-left: 3px solid #1B3A6B;
+    padding: 0 0 0 8px; 
+    border-radius: 2px; 
+    margin-left: 20px;
+}
+
+.red{
+    color:#EF4444 ;
+}
+
+.EventType {
+    display: flex;
+
+    gap: 30px;
+    color: #6B7280;
+    border-bottom: 1px solid #F1F5F9; 
+    padding-bottom: 18px;
+    padding-top: 12px;
+}
+
+.RecipientInformation{
+    display: flex;
+
+
 }
 
 
 
+.Enter{
+    padding-left: 13px;
+    font-weight: bold;
+}
+
+.secondTitle img{
+    padding-left: 20px;
+}
+
+.searchGroup label{
+    font-weight: bold;
+    color: #1B3A6B;
+    font-size: 13px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchGroup{
+    display: grid;
+    padding-right: 12px;
+}
+
+.RecipientInformation{
+    
+  color:#1B3A6B;
+  font-weight: bold;
+  padding:12px 40px;
+
+  border-left: 3px solid #1B3A6B;
+  padding: 0 0 0 8px; 
+  margin-top: 12px;
+  margin-left: 20px;
+  border-radius: 2px;    
+
+}
+
+.InformationContainer{
+   display: flex;
+   gap: 10px;
+   margin-top: 12px;
+   margin-left: 20px;
+   border-radius: 0 0 8px 8px;
+   border-bottom: 1px solid #f1f5f9;
+   padding-bottom: 18px;
+}
+
+.InformationContainer label{
+    display: grid;
+    padding-bottom: 16px;
+
+}
+
+.relation{
+    display: grid;
+}
 
 
+.applyDate{
+display: grid;
+
+}
+
+.InformationContainer label{
+  color:#1B3A6B;
+  font-weight: bold;   
+  font-size: 13px; 
+}
+
+.accountFields{
+    display: flex;
+    padding-left: 20px;
+    gap: 12px;
+}
+
+.PayoutAccount{
+    color:#1B3A6B;
+    font-weight: bold;
+    padding:12px 40px;
+
+  border-left: 3px solid #1B3A6B;
+  padding: 0 0 0 8px; 
+  margin-left: 20px;
+  border-radius: 2px; 
+
+}
+
+.check{
+    display: flex;
+    margin-right: 12px;
+     width: 101px;
+    height: 36px;
+    background-color:#F0FDF4;
+    color: #16A34A;
+    border: solid 1px #BBF7D0;
+    border-radius: 4px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    cursor: pointer; 
+    padding-left: 18px;
+}
+
+.accountContainer{
+    padding-top: 18px;
+    padding-bottom: 12px;
+}
+
+.fileBox{
+    display: flex;
+    width: 1150px;
+    height: 80px;
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.selectButton{
+    display: flex;
+
+}
+
+.textGroup{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding-right: 8px;
+}
+
+.main{
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    color: #6B7280;
+}
+
+.sub{
+    display: flex;
+    font-size: 11px;
+    color: #9CA3AF;
+    padding-left: 20px;
+}
+
+.fileBtn{
+    display: flex;
+    gap: 8px;
+}
+.fileBtn img{
+    padding-left: 16px;
+
+}
+
+.selectButton{
+    display: flex;
+    width: 110px;
+    height: 30px;
+    background-color: #FFFFFF;
+    color: #374151;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 6 16 6 0px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid #D1D5DB;
+    
+}
+
+.uploadFile{
+  color:#1B3A6B;
+  font-weight: bold;
+  padding:12px 40px;
+
+  border-left: 3px solid #1B3A6B;
+  padding: 0 0 0 8px; 
+  margin-left: 20px;
+  border-radius: 2px; 
+}
+
+.textGroup {
+    display:flex;
+}
+
+.pdf{
+    width: 1150px;
+    height: 48px;
+    border: 1px solid #E5E7EB;
+    border-radius:6px;
+    margin-bottom: 18px;
+
+}
+
+.pdfTitle{
+    display: flex;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 2px;
+    font-size: 13px;
+    margin-left: 55px;
+    padding-top: 8px;
+}
+
+.pdf p{
+    color: #9CA3AF;
+    font-size: 11px;
+    margin-left: 55px;
+}
+
+.pdfImg{
+    display: flex;
+    align-items: center;
+}
+
+.comments p{
+    font-weight: bold;
+    color:#374151 ;
+    font-size: 13px;
+}
+
+.commentsBox{
+    font-weight: bold;
+    font-size: 13px;
+    padding-bottom: 6px;
+    width: 1150px;
+    height: 56px;
+    border: solid 1px #D1D5DB;
+    border-radius: 6px;
+    display: flex;
+    padding:10px 0 0 12px ;
+    padding-bottom: 20px;
+}
+
+.Notes{
+    color: #9CA3AF;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.EventType {
+  display: inline-flex;
+  text-align: center;
+  font-size: 13px;
+  color: #6B7280;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 0;
+  margin-left: 20px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.EventType li {
+  padding-top: 10px;
+  width: 90px;
+  height: 36px;
+  border: 1px solid #D1D5DB;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.EventType li:hover {
+  color: white;
+  background-color: #1B3A6B;
+  font-weight: bold;
+}
+
+.EventType li:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.EventType li:not(:first-child) {
+  border-left: none;
+}
+
+.EventType li:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.checkOption {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+}
+
+
+.optionTitle {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+}
+
+.다른이름 label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  
+}
+
+.inputGroup {
+  display: grid;
+  align-items: center;
+  gap: 12px;
+}
+
+.inputGroup label {
+    display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.inputGroup .dateInput {
+  width: 200px;
+  height: 36px;
+  padding: 0 12px;
+  font-size: 13px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #1F2937;
+  background-color: #FFFFFF;
+}
+
+.inputGroup .dateInput:focus {
+  outline: none;
+  border-color: #1B3A6B;
+}
+
+.searchGroup input{
+ border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 12px;
+  padding-left: 10px;
+  background-color: #F9FAFB;
+}
+
+.InformationContainer input{
+border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 12px;
+  padding-left: 10px;
+  width: 180px;
+  height: 36px;
+  color:#9CA3AF ;
+}
+
+.accountFields input{
+   border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 12px;
+  padding-left: 10px;
+  width: 180px;
+  height: 36px;
+  color:#9CA3AF ; 
+  display: grid;
+  gap: 10px;
+}
 

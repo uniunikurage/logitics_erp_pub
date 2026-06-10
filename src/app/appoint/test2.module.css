@@ -1,0 +1,687 @@
+.container {
+  width: 1440px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1B3A6B;
+}
+
+.left {
+  display: flex;
+  gap: 54px;
+}
+
+.logoWrapper {
+  padding: 18px 54px;
+  color: white;
+}
+
+.menuWrapper {
+  display: flex;
+  padding: 19.5px 22px;
+  gap: 44px;
+  color: #93C5FD;
+}
+
+.right {
+  display: flex;
+  color: white;
+  padding: 20px 54px;
+  gap: 10px;
+}
+
+.contentContainer {
+  display: flex;
+  background-color: #F8FAFC;
+}
+
+.sideBar {
+  width: 210px;
+  height: 884px;
+  background: #1E293B;
+}
+
+.sideContainer {
+  width: 210px;
+  display: grid;
+  background: #1E293B;
+  color: white;
+}
+
+.sideContainer li {
+  padding: 10px 44px;
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+.sideTitle {
+  background: #162032;
+  color: #60A5FA;
+  width: 210px;
+  height: 40px;
+  font-weight: bold;
+  padding: 12.5px 37px;
+  font-size: 12px;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.homeIconWrapper {
+  display: flex;
+  color: #6B7280;
+  padding: 21.5px 22.5px;
+  gap: 10.5px;
+  font-size: 12px;
+}
+
+.homeIconWrapper img {
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.downloadBtn {
+  display: flex;
+  padding: 16px 20px;
+  background-color: white;
+  color: #162032;
+  cursor: pointer;
+  border: solid #D1D5DB 1px;
+  border-radius: 6px;
+  font-size: 13px;
+  gap: 6px;
+  line-height: 1px;
+}
+.downloadBtn img {
+    display: flex;
+  width: 10px;
+  height: 10px;
+    margin-top: -6px; 
+}
+
+.mainBtn {
+  display: flex;
+  gap: 8px;
+  height: 24px;
+}
+
+.newloadBtn {
+  display: flex;
+  padding: 16px 20px;
+  background-color: #1B3A6B;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+  gap: 6px;
+  font-weight: bold;
+  line-height: 1px;
+  margin-right: 20px;
+}
+
+.newloadBtn img {
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+}
+
+.mainTitle {
+  padding-left: 20px;
+  padding-bottom: 21px;
+}
+
+.mainTitle span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainTitle p {
+  color: #6B7280;
+}
+
+.searchTitle {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 16px;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchTitle img {
+  width: 14px;
+  height: 14px;
+}
+
+.searchTitle span {
+  font-weight: bold;
+  color: #1B3A6B;
+  font-size: 13px;
+}
+
+.searchBar {
+  width: 1190px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  margin: 0 auto;
+  border: solid 1px #D1D5DB;
+  border-radius: 6px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.searchFilter {
+  display: flex;
+  margin-left: 20px;
+}
+
+.filterGroup label {
+  color: #374151;
+  background-color: #F1F5F9;
+  width: 72px;
+  height: 38px;
+  border-radius: 6px 0px 0px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D1D5DB;
+}
+
+.filterGroup input {
+  display: flex;
+  text-align: center;
+  border: 1px solid #D1D5DB;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 13px;
+  padding-right: 20px;
+}
+
+.filterGroup option {
+  border: solid 1px #D1D5DB;
+  border-radius: 6px;
+  font-size: 13px;
+  width: 120px;
+}
+
+.loadBtn {
+  display: flex;
+  background-color: #1B3A6B;
+  align-items: center;
+  color: #fff;
+  gap: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 18px;
+}
+
+.loadBtn img {
+  width: 13px;
+  height: 13px;
+}
+
+.resetBtn {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  gap: 6px;
+  color: #1B3A6B;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  font-size: 13px;
+  padding: 17px;
+}
+
+.resetBtn img {
+  width: 13px;
+  height: 13px;
+}
+
+.selectOption {
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  color: #9CA3AF;
+  padding: 9px 86px 9px 12px;
+}
+
+.empBox {
+  display: flex;
+  flex-direction: column;
+  width: 1190px;
+  height: 350px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+  border-bottom: 1px solid #D1D5DB;
+}
+
+.rowList {
+  display: flex;
+  background-color: #F1F5F9;
+  font-weight: bold;
+  color: #6B7280;
+  font-size: 12px;
+  padding: 10px;
+}
+.rowList li {
+  flex: 1;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.row li {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  padding: 20px 0;
+  border-bottom: 1px solid #D1D5DB;
+}
+
+
+
+.rest {
+  width: 60px;
+  height: 20px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background-color: #FEF3C7;
+  color: #D97706;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.editBtn {
+  width: 39px;
+  height: 21px;
+  background-color: #EFF6FF;
+  color: #2563EB;
+  border-radius: 4px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delateBtn{
+    width: 39px;
+  height: 21px;
+  background-color:#FFF1F2;
+  color:#E11D48;
+  border-radius: 4px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 12px;
+}
+.paginationWrap {
+  width: 1190px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  display: flex;
+  padding-left: 16px;
+  padding-top: 16px;
+  color: #6B7280;
+}
+
+.pageList {
+  padding-top: 10px;
+  padding-right: 16px;
+  display: flex;
+  gap: 4px;
+}
+
+.pageList li {
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px #D1D5DB;
+  text-align: center;
+  font-weight: 400;
+  color: #6B7280;
+  padding-top: 2px;
+}
+
+.pageList li:hover {
+  background-color: #1B3A6B;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pageList img {
+  margin: 5px 6px;
+}
+
+.searchBtn {
+  display: flex;
+  gap: 8px;
+  width: 38px;
+  height: 38px;
+  background-color: #1B3A6B;
+  border-radius: 0px 6px 6px 0;
+  cursor: pointer;
+}
+
+.searchBtn img {
+  width: 13px;
+  height: 13px;
+  margin: 12px 12px 0 12px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 1190px;
+  height: 46px;
+  background-color: #F8FAFC;
+  border-radius: 8px 8px 0 0;
+  padding-left: 20px;
+}
+
+.form span {
+  color: #1B3A6B;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mainContainer {
+  width: 1190px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.mainContainer input {
+  display: flex;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 13px;
+  width: 180px;
+}
+
+.formContainer {
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+  width: 1190px;
+  border: solid 1px #E5E7EB;
+  color: #374151;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.singleRowArea {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.inputGroup {
+  flex: 1;
+}
+
+.inputGroup ul {
+  display: flex;
+  text-align: center;
+  font-size: 13px;
+  color: #6B7280;
+  cursor: pointer;
+}
+
+.inputGroup li:hover {
+  color: white;
+  background-color: #1B3A6B;
+  font-weight: bold;
+}
+
+.inputGroup li {
+  padding-top: 10px;
+  width: 56px;
+  height: 36px;
+  border: 1px solid #D1D5DB;
+  box-sizing: border-box;
+}
+
+.inputGroup li:nth-child(1) {
+  border-radius: 6px 0 0 6px;
+}
+
+.inputGroup li:nth-child(2),
+.inputGroup li:nth-child(3) {
+  border-left: 0px;
+}
+
+.inputGroup li:nth-child(4) {
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+}
+
+.red {
+  color: #EF4444;
+}
+
+.assignmentSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.containerBox {
+  flex: 1;
+  border: 1px solid#FECACA;
+  background-color: #FFF7F7;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+ .titleRow span {
+  color: #DC2626;
+  font-weight: bold;
+}
+.arrow {
+  flex-shrink: 0;
+}
+
+
+
+.preAssignment, .postAssignment {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* 타이틀 줄과 아래 필터 상자들 사이의 간격 */
+  width: 100%;
+}
+
+/* 🚀 핵심: 타이틀 글자와 회색 선을 무조건 가로로 나란히 정렬 */
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* 글자와 선 사이의 좌우 간격 */
+  width: 100%;
+}
+
+.titleRow span {
+  font-weight: bold;
+  color: #1B3A6B;
+  font-size: 14px;
+  flex-shrink: 0; /* 글자가 찌그러지지 않도록 고정 */
+}
+
+/* 글자 우측 남은 빈 공간을 선이 끝까지 꽉 채우도록 설정 */
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #E5E7EB;
+}
+
+/* 아래쪽 부서, 직급, 직책 가로 정렬 */
+.filterRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  flex: 1;
+  color:#6B7280 ;
+}
+
+.filter .selectOption{
+    background-color: white;
+
+    
+}
+
+.singleRowArea label{
+    font-weight: bold;
+}
+
+.afterBox {
+  background-color: #EFF6FF;
+  border: 1px solid#BFDBFE;  
+  
+}
+.afterBox .titleRow span {
+  color: #1D4ED8; 
+  font-weight: bold;
+}
+.afterBox .line {
+  background-color: #93C5FD; /* 파란색 구분선 */
+}
+
+.afterBox .selectOption{
+    border:solid 1px #1D4ED8;
+}
+
+.beforeBox .line{
+background-color: #FECACA;
+}
+
+.noteArea {
+  display: grid;
+  margin-top: 16px;       
+  gap: 6px;              
+}
+
+.noteArea {
+  display: grid;
+  gap: 8px;  
+  padding-bottom: 72px;       
+}
+
+.note {
+  display: grid;
+  width: 1150px;
+  height: 60px;
+  border:1px solid #D1D5DB;
+  border-radius: 6px;
+  resize: none;
+}
+
+.note::placeholder{
+    padding: 10px 0px 0px 12px;
+    color: #9CA3AF;
+    font-size: 13px;
+}
+
+
+.noteArea span {
+  font-weight: bold;
+  font-size: 13px;
+  color: #1B3A6B;
+}
+
+.formContainer .containerBox:not(.afterBox) {
+  background-color: #FFF5F5;
+  border: 1px solid #FECACA;
+}
+
+.formContainer .containerBox:not(.afterBox) .titleRow span {
+  color: #DC2626;
+  font-weight: bold;
+}
+
+.formContainer .containerBox:not(.afterBox) .line {
+  background-color: #FCA5A5;
+}
+
+.formContainer .containerBox:not(.afterBox) .selectOption {
+  border: 1px solid #DC2626;
+}
+
+.dept{
+  color: #6B7280;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rank{
+  color: #9CA3AF;
+    display: flex;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.deptAfter{
+  color: #1D4ED8;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rankAfter{
+  display: flex;
+  justify-content: center;
+  color: #3B82F6;
+  font-size: 11px;
+}
+
+
+
+
+
+
+

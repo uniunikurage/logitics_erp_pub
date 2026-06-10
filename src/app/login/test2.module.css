@@ -233,3 +233,17 @@
     color: #2563EB;
     font-weight: bold;
 }
+
+.checkContainer{
+    width: 100px;
+    height: 100px;
+}
+
+.checkBox{
+    width: 16px;
+    height: 16px;
+    background: #1E3A5F;
+    border-radius: 4px;
+}
+
+

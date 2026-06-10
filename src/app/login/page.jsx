@@ -130,6 +130,12 @@ export default function Page() {
             />
           </div>
 
+          <div className={s.checkContainer}>
+            <div className={s.checkBox}></div>
+            <span className={s.keepLogin}>로그인 상태 유지</span>
+            <span className={s.find}>비밀번호 찾기</span>
+          </div>
+
           <div className={s.loginOp}>
             <button className={s.loginBtn} onClick={() => goLogin()}>
               로그인
