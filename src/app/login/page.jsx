@@ -124,7 +124,7 @@ export default function Page() {
         </div>
 
         <div className={s.loginContainer}>
-          <span className={s.log}>로그인</span>
+          <span className={s.log}>회원가입</span>
           <span className={s.logSmall}>
             계정에 로그인하여 업무를 시작하세요
           </span>
@@ -165,7 +165,11 @@ export default function Page() {
             </button>
             <span className={s.or}>또는</span>
             <button className={s.loginKakao}>
+<<<<<<< Updated upstream
               <img src="/images/kakao_login.png" alt="" />
+=======
+              <img src="/images/kakao_login..png" alt="" />
+>>>>>>> Stashed changes
             </button>
           </div>
           <div className={s.sign}>
