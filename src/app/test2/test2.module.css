@@ -379,7 +379,8 @@
 .pageList{
     padding-top: 10px;
     padding-right: 16px;
-    display: flex;   
+    display: flex;  
+     
     gap: 4px;
 }
 

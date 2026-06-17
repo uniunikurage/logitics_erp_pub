@@ -6,14 +6,135 @@ import baseApi from "@/baseApi";
 import Nav from "@/component/common/Nav";
 import Aside from "@/component/common/Aside";
 import { Input } from "@/components/ui/input";
+import { X } from "lucide-react";
 
 export default function Page() {
-  const [employees, setEmployees] = useState([]);
+  const [employees, setEmployees] = useState();
+  const [applyInfo, setApplyInfo] = useState();
+  const [eventType, setEventType] = useState();
+  const [eventUserName, setEventUserName] = useState();
+  const [relationType, setRelationType] = useState();
+  const [eventDate, setEventDate] = useState();
+  const [location, setLocation] = useState();
+  const [bankName, setBankName] = useState();
+  const [bankNumber, setBankNumber] = useState();
+  const [bankHolder, setBankHolder] = useState();
+  // 경조비신청현황 리스트
+  const [eventAppliedList, setEventAppliedList] = useState([]);
+
+  //함수 -> 경조비신청현황 리스트 조회
+  const 경조비신청리스트조회 = async () => {
+    const token = localStorage.getItem("accessToken");
+
+    const res = await baseApi.get("/api/v1/support", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    setEventAppliedList(res?.data?.data || []);
+  };
+
+  useEffect(() => {
+    //경조비신청현황조회
+    경조비신청리스트조회();
+  }, []);
+
+  useEffect(() => {
+    const departmentName = localStorage.getItem("departmentName");
+    const name = localStorage.getItem("name");
+    const email = localStorage.getItem("email");
+    const employeeNo = localStorage.getItem("employeeNo");
+    const position = localStorage.getItem("position");
+
+    const 신청연도 = new Date().getFullYear();
+    const 신청월 = new Date().getMonth() + 1;
+    const 신청일 = new Date().getDate();
+
+    const 신청전체일자 = `${신청연도}.${신청월}.${신청일}`;
+
+    setApplyInfo({
+      departmentName,
+      name,
+      email,
+      employeeNo,
+      position,
+      신청전체일자,
+    });
+  }, []);
+
+  const 경조사비신청하기 = async () => {
+    const token = localStorage.getItem("accessToken");
+
+    if (!eventUserName) {
+      alert("신청자 성명이 없습니다.");
+      return;
+    }
+
+    if (!relationType) {
+      alert("관계 유형을 선택해주세요.");
+      return;
+    }
+
+    if (!eventDate) {
+      alert("경조일을 선택해주세요");
+      return;
+    }
+
+    if (!bankName) {
+      alert("은행을 선택해주세요");
+      return;
+    }
+
+    if (!(10 <= bankNumber.length && bankNumber.length <= 12)) {
+      alert("계좌번호를 입력해주세요");
+      return;
+    }
+
+    if (!bankHolder) {
+      alert("예금주를 입력해주세요");
+      return;
+    }
+
+    //
+
+    //
+
+    const res = await baseApi.post(
+      "/api/v1/support",
+      {
+        eventType: eventType,
+        relation: relationType,
+        targetName: eventUserName,
+
+        applicationDate: "2026-06-11",
+        eventDate: "2026-06-11",
+        requestedAmount: 100000,
+
+        eventLocation: location,
+        bankName: bankName,
+        accountNumber: bankNumber,
+        accountHolder: bankHolder,
+        approvalStatus: "확인",
+        memo: "졸렵다",
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+  };
 
   useEffect(() => {
     const getEmployee = async () => {
       try {
-        const response = await baseApi.get("/api/v1/employees");
+        const response = await baseApi.get("/api/v1/employees", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
         console.log(response.data.data);
         setEmployees(response.data.data);
       } catch (error) {
@@ -94,41 +215,57 @@ export default function Page() {
               <div className={s.searchContainer}>
                 <div className={s.searchGroup}>
                   <label htmlFor="epNum">사원번호</label>
-                  <input type="text" id="epNum" placeholder="전체" />
+                  <input
+                    type="text"
+                    id="epNum"
+                    placeholder="전체"
+                    readOnly
+                    value={applyInfo?.employeeNo}
+                  />
                 </div>
 
                 <div className={s.searchGroup}>
                   <label htmlFor="epName">성명</label>
-                  <input type="text" id="epName" placeholder="성명" />
+                  <input
+                    type="text"
+                    id="epName"
+                    placeholder="성명"
+                    readOnly
+                    value={applyInfo?.name}
+                  />
                 </div>
 
-                <div className={s.filterGroup}>
+                <div className={s.searchGroup}>
                   <label htmlFor="dept">부서</label>
-                  <select id="dept" className={s.selectOption}>
-                    <option value="">전체</option>
-                    <option value="hr">인사팀</option>
-                    <option value="dev">개발팀</option>
-                  </select>
+                  <input
+                    type="text"
+                    id="epName"
+                    placeholder="부서"
+                    readOnly
+                    value={applyInfo?.departmentName}
+                  />
                 </div>
 
-                <div className={s.filterGroup}>
+                <div className={s.searchGroup}>
                   <label htmlFor="rank">직급</label>
-                  <select id="rank" className={s.selectOption}>
-                    <option value="">전체</option>
-                    <option value="staff">사원</option>
-                    <option value="assistantManager">대리</option>
-                    <option value="Manager">과장</option>
-                  </select>
+                  <input
+                    type="text"
+                    id="epName"
+                    placeholder="직급"
+                    readOnly
+                    value={applyInfo?.position}
+                  />
                 </div>
 
-                <div className={s.filterGroup}>
+                <div className={s.searchGroup}>
                   <label htmlFor="applyDate">신청일</label>
-                  <select id="applyDate" className={s.selectOption}>
-                    <option value="">전체</option>
-                    <option value="today">오늘</option>
-                    <option value="week">1주일</option>
-                    <option value="month">1개월</option>
-                  </select>
+                  <input
+                    type="text"
+                    id="epName"
+                    placeholder="신청일"
+                    readOnly
+                    value={applyInfo?.신청전체일자}
+                  />
                 </div>
               </div>
               <div className={s.checkOption}>
@@ -137,13 +274,55 @@ export default function Page() {
                   <span className={s.red}>*</span>
                 </div>
                 <ul className={s.EventType}>
-                  <li>본인결혼</li>
-                  <li>자녀결혼</li>
-                  <li>출산</li>
-                  <li>부모사망</li>
-                  <li>배우자사망</li>
-                  <li>부모회갑</li>
-                  <li>기타</li>
+                  <li
+                    onClick={() => {
+                      setEventType("본인결혼");
+                    }}
+                  >
+                    본인결혼
+                  </li>
+                  <li
+                    onClick={() => {
+                      setEventType("자녀결혼");
+                    }}
+                  >
+                    자녀결혼
+                  </li>
+                  <li
+                    onClick={() => {
+                      setEventType("출산");
+                    }}
+                  >
+                    출산
+                  </li>
+                  <li
+                    onClick={() => {
+                      setEventType("부모사망");
+                    }}
+                  >
+                    부모사망
+                  </li>
+                  <li
+                    onClick={() => {
+                      setEventType("배우자사망");
+                    }}
+                  >
+                    배우자사망
+                  </li>
+                  <li
+                    onClick={() => {
+                      setEventType("부모회갑");
+                    }}
+                  >
+                    부모회갑
+                  </li>
+                  <li
+                    onClick={() => {
+                      setEventType("기타");
+                    }}
+                  >
+                    기타
+                  </li>
                 </ul>
               </div>
 
@@ -160,12 +339,22 @@ export default function Page() {
                     type="text"
                     id="epName"
                     placeholder="성명을 입력하세요"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                      setEventUserName(e.target.value);
+                    }}
                   />
                 </div>
 
                 <div className={s.inputGroup}>
                   <label htmlFor="relation">관계</label>
-                  <select id="relation" className={s.selectOption}>
+                  <select
+                    id="relation"
+                    className={s.selectOption}
+                    onChange={(e) => {
+                      setRelationType(e.target.value);
+                    }}
+                  >
                     <option value="">전체</option>
                     <option value="self">본인</option>
                     <option value="parents">부모</option>
@@ -176,12 +365,27 @@ export default function Page() {
                     <option value="other">기타</option>
                   </select>
                 </div>
-
                 <div className={s.inputGroup}>
                   <label htmlFor="applyDate">
                     경조일 <span className={s.red}>*</span>
                   </label>
-                  <input type="date" id="applyDate" className={s.dateInput} />
+                  {/* <select
+                    id="relation"
+                    className={s.selectOption}
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                      setEventDate(e.target.value);
+                    }}
+                  ></select> */}
+                  <input
+                    type="date"
+                    id="applyDate"
+                    className={s.dateInput}
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                      setEventDate(e.target.value);
+                    }}
+                  />
                 </div>
 
                 <div className={s.place}>
@@ -190,6 +394,10 @@ export default function Page() {
                     type="text"
                     id="place"
                     placeholder="장소를 입력하세요(선택)"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                      setLocation(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -202,7 +410,11 @@ export default function Page() {
                 <div className={s.accountFields}>
                   <div className={s.fieldGroup}>
                     <label htmlFor="bankType">은행</label>
-                    <select id="bankType" className={s.selectOption}>
+                    <select
+                      id="bankType"
+                      className={s.selectOption}
+                      onChange={(e) => setBankName(e.target.value)}
+                    >
                       <option value="">은행 선택</option>
                       <option value="shinhan">신한은행</option>
                       <option value="kookmin">KB국민은행</option>
@@ -217,6 +429,7 @@ export default function Page() {
                       type="text"
                       id="accountNumber"
                       placeholder="- 없이 숫자만 입력"
+                      onChange={(e) => setBankNumber(e.target.value)}
                     />
                   </div>
 
@@ -226,6 +439,7 @@ export default function Page() {
                       type="text"
                       id="accountHolder"
                       placeholder="예금주 성명"
+                      onChange={(e) => setBankHolder(e.target.value)}
                     />
                   </div>
                   <button className={s.check}>계좌 확인</button>
@@ -267,6 +481,96 @@ export default function Page() {
               </div>
               <div className={s.commentsBox}>
                 <span className={s.Notes}>추가 사항을 입력하세요. (선택)</span>
+              </div>
+
+              <div className={s.mainBtn}>
+                <button
+                  type="button"
+                  className={`${s.downloadBtn} ${s.flexHorizontalCenter}`}
+                >
+                  <X size={10} />
+                  취소
+                </button>
+
+                <button
+                  type="button"
+                  className={s.newloadBtn}
+                  onClick={async () => {
+                    console.log(
+                      eventUserName,
+                      relationType,
+                      eventDate,
+                      location,
+                      bankName,
+                      bankNumber,
+                      bankHolder,
+                    );
+
+                    await 경조사비신청하기();
+                    await 경조비신청리스트조회();
+                  }}
+                >
+                  <img src="/images/Plus.png" alt="" />
+                  신청하기
+                </button>
+              </div>
+            </div>
+            <div className={s.empBox}>
+              <ul className={s.rowList}>
+                <li>NO</li>
+                <li>발령번호</li>
+                <li>사원번호</li>
+                <li>성명</li>
+                <li>발령유형</li>
+                <li>발령전 부서/직급</li>
+                <li>발령후 부서/직급</li>
+                <li>발령일</li>
+                <li>등록자</li>
+                <li>관리</li>
+              </ul>
+
+              {eventAppliedList.map((item, idx) => (
+                <ul className={s.row} key={idx}>
+                  <li>{idx}</li>
+                  <li>{item.applicationDate}</li>
+                  <li>{item.eventType}</li>
+                  <li>
+                    <strong>{item.targetName}</strong>
+                  </li>
+                  <li className={item.eventDate}>경조일</li>
+                  <li>
+                    <span className={item.requestedAmount}>지급금액</span>
+                    <span className={item.accountNumber}>지급계좌</span>
+                  </li>
+                  <li>
+                    <span className={s.deptAfter}>인사팀</span>
+                    <span className={s.rankAfter}>차장</span>
+                  </li>
+                  <li>2025.07.01</li>
+                  <li>홍길동</li>
+                  <li>
+                    <button className={s.editBtn}>수정</button>
+                    <button className={s.delateBtn}>삭제</button>
+                  </li>
+                </ul>
+              ))}
+
+              <div className={s.paginationWrap}>
+                <ul className={s.total}>
+                  <span>총 3건</span>
+                </ul>
+
+                <ul className={s.pageList}>
+                  <li>
+                    <img src="Chevron Left.png" alt="" />
+                  </li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>
+                    <img src="Chevron Right.png" alt="" />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

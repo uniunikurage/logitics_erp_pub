@@ -13,6 +13,11 @@ export default function Page() {
 
   // 화면이 로드되자마자 실행됨
   useEffect(() => {
+    const departmentName = localStorage.getItem("departmentName");
+    const name = localStorage.getItem("name");
+
+    console.log(departmentName, name);
+
     //1. api를 요청해서 받는다.
     const getEmployee = async () => {
       // 로그인 떄 저장한 토큰 가져옴

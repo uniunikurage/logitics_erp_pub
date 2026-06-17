@@ -54,6 +54,11 @@ export default function Page() {
 
       if (token) {
         localStorage.setItem("accessToken", res.data.data.accessToken);
+        localStorage.setItem("departmentName", res.data.data.departmentName);
+        localStorage.setItem("email", res.data.data.email);
+        localStorage.setItem("employeeNo", res.data.data.employeeNo);
+        localStorage.setItem("name", res.data.data.name);
+        localStorage.setItem("position", res.data.data.position);
         router.push("/test2");
       } else {
         alert("로그인 실패");
@@ -124,7 +129,7 @@ export default function Page() {
         </div>
 
         <div className={s.loginContainer}>
-          <span className={s.log}>로그인</span>
+          <span className={s.log}>회원가입</span>
           <span className={s.logSmall}>
             계정에 로그인하여 업무를 시작하세요
           </span>
@@ -135,6 +140,23 @@ export default function Page() {
               type="text"
               id="email"
               placeholder="이메일 주소를 입력하세요"
+              onKeyDown={(e) => {
+                console.log(e.key);
+
+                if (e.key === "Enter") {
+                  if (!loginInfo?.email) {
+                    alert("이메일을 입력해주세요");
+                    return;
+                  }
+
+                  if (!loginInfo?.password) {
+                    alert("비밀번호를 입력해주세요");
+                    return;
+                  }
+
+                  goLogin();
+                }
+              }}
               onChange={(e) =>
                 setLoginInfo((prev) => ({ ...prev, email: e.target.value }))
               }
@@ -147,6 +169,23 @@ export default function Page() {
               type="password"
               id="pw"
               placeholder="비밀번호를 입력하세요"
+              onKeyDown={(e) => {
+                console.log(e.key);
+
+                if (e.key === "Enter") {
+                  if (!loginInfo?.email) {
+                    alert("이메일을 입력해주세요");
+                    return;
+                  }
+
+                  if (!loginInfo?.password) {
+                    alert("비밀번호를 입력해주세요");
+                    return;
+                  }
+
+                  goLogin();
+                }
+              }}
               onChange={(e) =>
                 setLoginInfo((prev) => ({ ...prev, password: e.target.value }))
               }

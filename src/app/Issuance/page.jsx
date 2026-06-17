@@ -135,45 +135,206 @@ export default function Page() {
                   <span className={s.info}>신청자 정보</span>
                 </div>
               </div>
-              <form>
-                <div>
-                  <label>사원번호</label>
-                  <input type="text" placeholder="사원번호를 입력하세요" />
-                </div>
+              <div className={s.inputBox}>
+                {/* form 태그에 가로 정렬을 위한 클래스 추가 */}
+                <form className={s.formGrid}>
+                  <div className={s.inputGroup}>
+                    <label>사원번호</label>
+                    <input type="text" placeholder="사원번호를 입력하세요" />
+                  </div>
 
-                <div>
-                  <label>성명</label>
-                  <input type="text" placeholder="이름을 입력하세요" />
-                </div>
+                  <div className={s.inputGroup}>
+                    <label>성명</label>
+                    <input type="text" placeholder="이름을 입력하세요" />
+                  </div>
 
-                <div>
-                  <label>부서</label>
-                  <select>
-                    <option value="">부서 선택</option>
-                    <option value="hr">인사팀</option>
-                    <option value="dev">개발팀</option>
-                    <option value="sales">영업팀</option>
-                  </select>
-                </div>
+                  <div className={s.inputGroup}>
+                    <label>부서</label>
+                    <select>
+                      <option value="">부서 선택</option>
+                      <option value="hr">인사팀</option>
+                      <option value="dev">개발팀</option>
+                      <option value="sales">영업팀</option>
+                    </select>
+                  </div>
 
-                <div>
-                  <label>직급</label>
-                  <select>
-                    <option value="">직급 선택</option>
-                    <option value="staff">사원</option>
-                    <option value="manager">대리</option>
-                    <option value="senior">과장</option>
-                  </select>
-                </div>
+                  <div className={s.inputGroup}>
+                    <label>직급</label>
+                    <select>
+                      <option value="">직급 선택</option>
+                      <option value="staff">사원</option>
+                      <option value="manager">대리</option>
+                      <option value="senior">과장</option>
+                    </select>
+                  </div>
 
-                <div>
-                  <label>입사일</label>
-                  <input type="date" />
+                  <div className={s.inputGroup}>
+                    <label>입사일</label>
+                    <input type="date" />
+                  </div>
+                </form>
+              </div>
+              <div className={s.imformationBox}>
+                <div className={s.infoTitle}>
+                  <span className={s.info}>발급 상세 정보</span>
                 </div>
-              </form>
+              </div>
+              <div className={s.issuanceGroup}>
+                <div className={s.place}>
+                  <span>
+                    용도<span className={s.red}>*</span>
+                  </span>
+                  <input
+                    type="text"
+                    id="place"
+                    placeholder="예:관공서 제출용"
+                  />
+                </div>
+                <div className={s.inputGroup}>
+                  <div className={s.place}>
+                    <span>
+                      제출처<span className={s.red}>*</span>
+                    </span>
+                    <input
+                      type="text"
+                      id="place"
+                      placeholder="예:국민은행 ⚪︎⚪︎지점"
+                    />
+                  </div>
+                </div>
+                <div className={s.quantity}>
+                  <span>발급부수</span>
+                  <span className={s.red}>*</span>
+                </div>
+                <div className={s.language}>
+                  <div className={s.labelArea}>
+                    <span>언어선택</span>
+                    <span className={s.red}>*</span>
+                  </div>
+
+                  <div className={s.buttonArea}>
+                    <button className={s.korean}>국문</button>
+                    <button className={s.english}>영문</button>
+                  </div>
+                </div>
+              </div>
+              <div className={s.inputGroup}>
+                <div className={s.purpose}>
+                  <label htmlFor="applyDate">
+                    기준일 <span className={s.red}>*</span>
+                  </label>
+                  <input
+                    type="date"
+                    id="applyDate"
+                    className={s.dateInput}
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                      setEventDate(e.target.value);
+                    }}
+                  />
+                </div>
+                <div className={s.purpose}>
+                  <span>발급목적(선택)</span>
+                  <input
+                    type="text"
+                    id="place"
+                    placeholder="발급목적을 간략히 입력하세요."
+                  />
+                </div>
+              </div>
+              <div className={s.btnBox}>
+                <button className={s.cancelBox}>취소</button>
+                <button className={s.preview}>미리보기</button>
+                <button className={s.print}>출력하기</button>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className={s.empBox}>
+        <ul className={s.rowList}>
+          <li>NO</li>
+          <li>발급일시</li>
+          <li>증명서 종류</li>
+          <li>용도</li>
+          <li>제출처</li>
+          <li>언어</li>
+          <li>부수</li>
+          <li>발급번호</li>
+          <li>관리</li>
+        </ul>
+
+        {employees.map((item, idx) => (
+          <>
+            <ul className={s.row}>
+              <li>{idx}</li>
+              <li>{item.employeeId}</li>
+              <li>
+                <strong>{item.name}</strong>
+              </li>
+              <li>인사팀</li>
+              <li>팀장</li>
+              <li>2019.03.02</li>
+              <li>010-1234-5678</li>
+              <li>kim@company.com</li>
+              <li>
+                <span className={s.working}>재직중</span>
+              </li>
+              <li>
+                <button className={s.editBtn}>수정</button>
+              </li>
+            </ul>
+          </>
+        ))}
+
+        <ul className={s.row}>
+          <li>1</li>
+          <li>EMP-001</li>
+          <li>
+            <strong>김철수</strong>
+          </li>
+          <li>인사팀</li>
+          <li>팀장</li>
+          <li>2019.03.02</li>
+          <li>010-1234-5678</li>
+          <li>kim@company.com</li>
+          <li>
+            <span className={s.working}>재직중</span>
+          </li>
+          <li>
+            <button className={s.editBtn}>수정</button>
+          </li>
+        </ul>
+
+        <ul className={s.row}>
+          <li>2</li>
+          <li>EMP-002</li>
+          <li>
+            <strong>이영희</strong>
+          </li>
+          <li>경영지원팀</li>
+          <li>과장</li>
+          <li>2018.07.15</li>
+          <li>010-9876-5432</li>
+          <li>lee@company.com</li>
+          <li>
+            <span className={s.working}>재직중</span>
+          </li>
+          <li>
+            <button className={s.editBtn}>수정</button>
+          </li>
+        </ul>
+        <ul className={s.pageList}>
+          <li>
+            <img src="Chevron Left.png" alt="" />
+          </li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>
+            <img src="Chevron Right.png" alt="" />
+          </li>
+        </ul>
       </div>
     </div>
   );

@@ -272,9 +272,6 @@ export default function Page() {
                   <li>2025.07.01</li>
                   <li>홍길동</li>
                   <li>
-                    <span className={s.working}>재직중</span>
-                  </li>
-                  <li>
                     <button className={s.editBtn}>수정</button>
                     <button className={s.delateBtn}>삭제</button>
                   </li>
