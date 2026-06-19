@@ -1,0 +1,540 @@
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b3a6b;
+}
+
+.left {
+  display: flex;
+  gap: 54px;
+}
+
+.logoWrapper {
+  padding: 18px 54px;
+  color: white;
+}
+
+.menuWrapper {
+  display: flex;
+  padding: 19.5px 22px;
+  gap: 44px;
+  color: #93c5fd;
+}
+
+.right {
+  display: flex;
+  color: white;
+  padding: 20px 54px;
+  gap: 10px;
+}
+
+.contentContainer {
+  display: flex;
+}
+
+.sideBar {
+  width: 210px;
+  height: 884px;
+  background: #1e293b;
+}
+
+.sideContainer {
+  width: 210px;
+  display: grid;
+  background: #1e293b;
+  color: white;
+}
+
+.sideContainer li {
+  padding: 10px 44px;
+  font-size: 12px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.sideTitle {
+  background: #162032;
+  color: #60a5fa;
+  width: 210px;
+  height: 40px;
+  font-weight: bold;
+  padding: 12.5px 37px;
+  font-size: 12px;
+}
+
+.mainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+.Now {
+  color: #2563eb;
+}
+
+.homeIconWrapper {
+  display: flex;
+  color: #6b7280;
+  padding: 21.5px 22.5px;
+  gap: 10.5px;
+  font-size: 12px;
+}
+
+.homeIconWrapper img {
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.downloadBtn {
+  display: flex;
+  padding: 16px 20px;
+  background-color: white;
+  color: #162032;
+  cursor: pointer;
+  border: solid #d1d5db 1px;
+  border-radius: 6px;
+  font-size: 13px;
+  gap: 6px;
+  line-height: 1px;
+}
+.downloadBtn img {
+  width: 10px;
+  height: 10px;
+  margin-top: -5;
+}
+
+.mainBtn {
+  display: flex;
+  gap: 8px;
+  height: 24px;
+  align-items: center;
+  margin-top: 18px;
+  justify-content: flex-end;
+}
+
+.flexHorizontalCenter {
+  display: flex;
+  align-items: center;
+}
+
+.newloadBtn {
+  display: flex;
+  padding: 16px 20px;
+  background-color: #1b3a6b;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+  gap: 6px;
+  font-weight: bold;
+  line-height: 1px;
+  margin-right: 20px;
+}
+
+.newloadBtn img {
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+}
+
+.mainTitle {
+  padding-left: 20px;
+  padding-bottom: 21px;
+}
+
+.mainBar {
+  width: 100%;
+  padding: 0 24px 24px 24px;
+}
+
+.mainTitle span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainTitle p {
+  color: #6b7280;
+}
+
+.searchTitle {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 16px;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchTitle img {
+  width: 14px;
+  height: 14px;
+}
+
+.AttendanceManager {
+  display: flex;
+  width: 1190px;
+  height: 62px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.leftBtn {
+  width: 34px;
+  height: 34px;
+  margin: 14px 0 14px 20px;
+  background-color: #f8fafc;
+  border: 1px solid #d1d5db;
+  border-radius: 6px 0 0 6px;
+  cursor: pointer;
+}
+
+.leftBtn img {
+  padding-left: 10px;
+}
+
+.calendar {
+  display: flex;
+  width: 183px;
+  height: 34px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  font-weight: bold;
+  color: #111827;
+  text-align: center;
+  justify-content: center;
+  padding-top: 7px;
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.calendar img {
+  width: 13px;
+  height: 13px;
+  margin-top: 2px;
+  margin-right: 9px;
+}
+
+.rightBtn {
+  width: 34px;
+  height: 34px;
+  margin-top: 14px;
+  background-color: #f8fafc;
+  border: 1px solid #d1d5db;
+  border-radius: 0 6px 6px 0px;
+  cursor: pointer;
+}
+
+.rightBtn img {
+  padding-left: 10px;
+}
+
+.todayBox {
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  width: 71px;
+  height: 34px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  font-size: 13px;
+  font-weight: bold;
+  color: #2563eb;
+  border-radius: 6px;
+  padding-top: 9px;
+  cursor: pointer;
+}
+
+.todayBox img {
+  width: 13px;
+  height: 13px;
+  margin-right: 7px;
+}
+
+.inputGroup {
+  display: flex;
+}
+
+.inputGroup label {
+  margin: 23px 9px 0 16px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.selectInput {
+  margin-top: 14px;
+  width: 160px;
+  height: 34px;
+  background-color: white;
+  border: solid 1px#D1D5DB;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+  padding-left: 12px;
+}
+
+.searchInput {
+  width: 108px;
+  height: 34px;
+  margin-top: 14px;
+  padding-left: 25px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  margin-right: 75px;
+}
+
+.categoryBox {
+  display: flex;
+}
+
+.inquiry {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 83px;
+  height: 34px;
+  background-color: #1b3a6b;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+}
+
+.inquiry img {
+  padding-right: 2px;
+}
+
+.filterBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-left: 130px;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.filterBox li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.filterBox li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.present::before {
+  background-color: #e2e8f0;
+}
+.late::before {
+  background-color: #fed7aa;
+}
+.annual::before {
+  background-color: #bbf7d0;
+}
+.half::before {
+  background-color: #bae6fd;
+}
+.trip::before {
+  background-color: #ddd6fe;
+}
+.absent::before {
+  background-color: #fecaca;
+}
+.holiday::before {
+  background-color: #cbd5e1;
+}
+
+.attendanceBox {
+  display: flex;
+  width: 100%;
+  height: 46px;
+  background-color: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px 6px 0 0;
+  align-items: center;
+  padding-left: 16px;
+  color: #1b3a6b;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.attendanceBox span {
+  display: flex;
+  width: 57px;
+  height: 22px;
+  color: #1d4ed8;
+  background-color: #dbeafe;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 173px;
+  font-size: 11px;
+}
+
+.attendanceBox img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.red {
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.attendanceList {
+  width: 100%;
+  background-color: #f1f5f9;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.attendanceList ul {
+  display: grid;
+  grid-template-columns: 80px 100px repeat(30, 35px) repeat(4, 45px);
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attendanceList li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  border-right: 1px solid #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.attendanceList li:last-child {
+  border-right: none;
+}
+
+/* 1. 사원 리스트 행 전체 구조 (헤더와 너비 규칙이 완벽히 똑같아야 합니다) */
+.employeeList ul {
+  display: grid;
+  /* 성명(80px) 부서(100px) 숫자30칸(각35px) 통계4칸(각45px) */
+  grid-template-columns: 80px 100px repeat(30, 35px) repeat(4, 45px);
+  width: max-content;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.employeeList li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  font-size: 13px;
+  color: #1e293b;
+  border-right: 1px solid #f3f4f6;
+}
+
+.employeeList li:first-child {
+  font-weight: bold;
+}
+
+.employeeList li.lateText {
+  font-weight: bold;
+  color: #f59e0b !important;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.employeeList li.tripText {
+  font-weight: bold;
+  color: #7c3aed !important;
+  background-color: #f5f3ff;
+  border: 1px solid #ddd6fe;
+}
+
+.employeeList li.holidayText {
+  font-weight: bold;
+  background-color: #e8edf2;
+  border: 1px solid #d1d5db;
+  color: #94a3b8 !important;
+}
+
+.employeeList li.annualText {
+  font-weight: bold;
+  color: #10b981 !important;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.employeeList li.halfText {
+  font-weight: bold;
+  border: 1px solid #bae6fd;
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.attendanceList ul li:nth-last-child(4),
+.employeeList ul li:nth-last-child(4) {
+  background-color: #eff6ff !important;
+  font-weight: 900;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+}
+
+.attendanceList ul li:nth-last-child(3),
+.employeeList ul li:nth-last-child(3) {
+  background-color: #fff9db !important;
+  color: #ea580c;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  font-weight: 900;
+}
+
+/* 3. 맨 오른쪽에서 2번째 열 : '연차' 합계 칸 */
+.attendanceList ul li:nth-last-child(2),
+.employeeList ul li:nth-last-child(2) {
+  background-color: #f0fdf4;
+  font-weight: 900;
+  border: solid 1px #bbf7d0;
+  color: #16a34a;
+}
+
+.attendanceList ul li:nth-last-child(1) {
+  background-color: #fff1f2;
+  font-weight: bold;
+  color: #e11d48;
+}
+.employeeList ul li:nth-last-child(1) {
+  background-color: #fff1f2;
+  font-weight: bold;
+  color: #94a3b8;
+}

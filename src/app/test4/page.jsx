@@ -1,14 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import s from "./test2.module.css";
 import baseApi from "@/baseApi";
 import Nav from "@/component/common/Nav";
 import Aside from "@/component/common/Aside";
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
+import { toast } from "sonner";
+import axios from "axios";
 
 export default function Page() {
+  const fileUploaderRef = useRef(null);
+
   const [employees, setEmployees] = useState();
   const [applyInfo, setApplyInfo] = useState();
   const [eventType, setEventType] = useState();
@@ -21,6 +25,24 @@ export default function Page() {
   const [bankHolder, setBankHolder] = useState();
   // 경조비신청현황 리스트
   const [eventAppliedList, setEventAppliedList] = useState([]);
+
+  const fileUpload = async (fileList) => {
+    const url = "http://localhost:33000/api/v1/files/upload";
+
+    const token = localStorage.getItem("accessToken");
+
+    const 파일 = fileList[0];
+
+    const formData = new FormData();
+    formData.append("file", 파일);
+    formData.append("refType", "1");
+
+    await axios.post(url, formData, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  };
 
   //함수 -> 경조비신청현황 리스트 조회
   const 경조비신청리스트조회 = async () => {
@@ -40,6 +62,7 @@ export default function Page() {
     경조비신청리스트조회();
   }, []);
 
+  toast("d");
   useEffect(() => {
     const departmentName = localStorage.getItem("departmentName");
     const name = localStorage.getItem("name");
@@ -463,8 +486,24 @@ export default function Page() {
                     </span>
                   </div>
 
+                  <input
+                    type="file"
+                    hidden
+                    ref={fileUploaderRef}
+                    multiple
+                    onChange={(e) => {
+                      fileUpload(e.target.files);
+                    }}
+                  />
+
                   <div className={s.selectButton}>
-                    <button className={s.fileBtn}>
+                    <button
+                      className={s.fileBtn}
+                      onClick={() => {
+                        // 숨겨진거 클릭해
+                        fileUploaderRef.current.click();
+                      }}
+                    >
                       <img src="/images/Upload.png" alt="" />
                       <span>파일 선택</span>
                     </button>

@@ -358,7 +358,6 @@
 }
 
 .attendanceBox {
-  margin-top: 16px;
   display: flex;
   width: 340px;
   height: 46px;
@@ -389,14 +388,6 @@
   width: 15px;
   height: 15px;
   margin-right: 10px;
-}
-
-.attendanceWrapper {
-  width: 340px;
-  height: 578px;
-  background-color: white;
-  border-radius: 0 0 6px 6px;
-  border: 1px solid #d1d5db;
 }
 
 .red {
@@ -704,4 +695,365 @@
   font-size: 13px;
   margin-right: 16px;
   cursor: pointer;
+}
+
+.pageBody {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.attendanceFormBox {
+  width: 340px;
+  height: 610px;
+  background-color: white;
+  border-radius: 6px 6px 6px 6px;
+  border: 1px solid #d1d5db;
+}
+.managementList {
+  flex-grow: 1;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  height: 470px;
+}
+
+.managementBox {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  background-color: #f8fafc;
+  padding-left: 16px;
+}
+
+.managementBox p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1b3a6b;
+  margin-left: 8px;
+}
+
+.totalBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  gap: 8px;
+}
+
+.totalCount {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  width: 65px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.bulk {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  width: 86px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+}
+.bulk img {
+  width: 12px;
+  height: 12px;
+  margin-right: 1.5px;
+}
+
+.checkBox {
+  width: 16px;
+  height: 16px;
+  background-color: #1b3a6b;
+  border-radius: 4px;
+}
+
+.rowList {
+  display: grid;
+  grid-template-columns: 50px repeat(10, 1fr);
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f5f9;
+  font-weight: bold;
+  color: #6b7280;
+  font-size: 12px;
+  width: 838px;
+  height: 38px;
+}
+
+.rowList li {
+  text-align: center;
+}
+
+.checkBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.checkBox img {
+  width: 10px;
+  height: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40px repeat(10, 1fr);
+  font-size: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 13.5px 0 13.5px 0;
+  color: #374151;
+  margin-left: 25px;
+}
+
+.box {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+.box:hover {
+  background-color: #1b3a6b;
+}
+.manageColumn {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.manageColumn button {
+  height: 20px;
+  width: 37px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  border: none;
+}
+
+.editBtn {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+.delBtn {
+  background-color: #fee2e2;
+  color: #ef4444;
+  margin-right: 13px;
+}
+.register {
+  width: 50px;
+  height: 22px;
+  background-color: #fef9c3;
+  color: #ca8a04;
+  margin-right: 13px;
+}
+
+.present {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 20px;
+  border-radius: 10px;
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  font-weight: bold;
+}
+.late {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 20px;
+  border-radius: 10px;
+  color: #ea580c;
+  background-color: #fff7ed;
+  font-weight: bold;
+}
+.orange {
+  color: #ea580c;
+  font-weight: 900;
+}
+.orangeText {
+  color: #ea580c;
+}
+.leave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 20px;
+  border-radius: 10px;
+  color: #16a34a;
+  background-color: #f0fdf4;
+  font-weight: bold;
+}
+.greenText {
+  color: #16a34a;
+}
+
+.trip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 20px;
+  border-radius: 10px;
+  color: #7c3aed;
+  background-color: #f5f3ff;
+  font-weight: bold;
+}
+
+.purpleText {
+  color: #7c3aed;
+  font-weight: 900;
+}
+
+.grayText {
+  color: #374151;
+}
+.halfDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 20px;
+  border-radius: 10px;
+  color: #0284c7;
+  background-color: #e0f2fe;
+  font-weight: bold;
+}
+.skyText {
+  color: #0284c7;
+}
+
+.rowYellow {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 40px repeat(10, 1fr);
+  font-size: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 13.5px 0 13.5px 0;
+  padding-left: 25px;
+  color: #374151;
+  background-color: #fffbeb;
+}
+.unlisted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 20px;
+  border-radius: 10px;
+  color: #ca8a04;
+  background-color: #fef9c3;
+  font-weight: bold;
+}
+
+.paginationWrap {
+  display: flex; /* 안의 글자와 페이지 번호를 가로로 나란히 배치 */
+  align-items: center; /* 글자와 페이지 번호의 높이를 똑같이 맞춤 */
+  justify-content: space-between; /* 글자는 왼쪽 끝, 번호는 오른쪽 끝으로 찢기 */
+
+  width: 100%; /* 가로 전체 폭 차지 */
+  margin-top: 15px;
+}
+
+.totalList {
+  display: grid;
+  width: 100%;
+  height: 44px;
+  grid-template-columns: repeat(10, 1fr);
+
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f7ff;
+  border-bottom: 1px solid #bfdbfe;
+}
+
+.totalList li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #374151;
+  border-right: 1px solid #bfdbfe;
+}
+
+.smallText {
+  display: flex;
+  font-size: 10px;
+  color: #9ca3af;
+}
+.totalList p {
+  color: #1b3a6b;
+  font-weight: 900;
+}
+.totalHour {
+  color: #7c3aed;
+  font-weight: 900;
+}
+.total {
+  color: #1b3a6b;
+  font-weight: 900;
+}
+
+.pageList {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4;
+  margin-bottom: 20px;
+  margin-right: 16px;
+}
+
+.pageList li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #b9c3d3;
+  width: 28px;
+  height: 28px;
+}
+
+.pageList li:hover {
+  color: white;
+  font-weight: 900;
+  background-color: #1b3a6b;
+}
+
+.totalText {
+  width: 100%;
+  height: 46px;
+  padding-left: 16px;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 13px;
 }
