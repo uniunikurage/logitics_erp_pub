@@ -264,7 +264,7 @@ export default function Page() {
           <li>관리</li>
         </ul>
 
-        {employees.map((item, idx) => (
+        {(employees || []).map((item, idx) => (
           <>
             <ul className={s.row}>
               <li>{idx}</li>

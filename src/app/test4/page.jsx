@@ -9,9 +9,12 @@ import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
+import EventSupportModal from "@/component/EventSupportModal";
 
 export default function Page() {
   const fileUploaderRef = useRef(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const [employees, setEmployees] = useState();
   const [applyInfo, setApplyInfo] = useState();
@@ -615,6 +618,8 @@ export default function Page() {
           </div>
         </div>
       </div>
+
+      {isModalOpen && <EventSupportModal />}
     </div>
   );
 }

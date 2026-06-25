@@ -1,0 +1,226 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b3a6b;
+  width: 600px;
+  height: 50px;
+  border-radius: 12px 12px 0 0px;
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.titleTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.titleTextWrapper p {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.small {
+  font-size: 10px;
+  color: #60a5fa;
+  font-weight: 400;
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.mainBtn {
+  width: 55px;
+  height: 20px;
+  background-color: #ca8a04;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainBtn button {
+  background: none;
+  border: none;
+  color: #fef9c3;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close {
+  width: 28px;
+  height: 28px;
+  background-color: #2d5f9e;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.EventOption {
+  color: #1b3a6b;
+  font-weight: bold;
+  border-left: 3px solid #1b3a6b;
+  padding: 0 0 0 8px;
+  border-radius: 2px;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.inputGroup {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.inputGroup label {
+  display: flex;
+  font-size: 13px;
+  color: #374151;
+  font-weight: bold;
+}
+
+.inputGroup input {
+  width: 268px;
+  height: 36px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.selectBox {
+  width: 268px;
+  height: 40px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emStatus {
+  width: 268px;
+  height: 36px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.searchZip {
+  width: 84px;
+  height: 36px;
+  background-color: #1b3a6b;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.zipcodeField {
+  display: flex;
+  gap: 8px;
+  width: 236px;
+}
+
+.zipcodeField input {
+  flex: 1;
+  height: 36px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.searchZip {
+  height: 36px;
+  padding: 0 14px;
+  background-color: #1b3a6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.도로명주소 {
+  width: 568px;
+  height: 36px;
+}
+.lastBox {
+  width: 600px;
+  height: 52px;
+  background-color: #f8fafc;
+  border-radius: 0 0 12px 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lastUpdate {
+  margin-left: 20px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.cancel {
+  width: 98px;
+  height: 34px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closeBtn {
+  background-color: #1b3a6b;
+  width: 82px;
+  height: 34px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnBox {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.red {
+  color: #ef4444;
+  font-size: 12px;
+  margin-right: 5px;
+}

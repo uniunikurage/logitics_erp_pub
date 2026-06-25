@@ -317,7 +317,7 @@ export default function Page() {
             </div>
             <div className={s.attendanceBox}>
               <img src="/images/Layers.png" alt="" />
-              <p>직급별 기준 휴가일수</p>
+              <p>특별 휴가 정책</p>
             </div>
           </div>
         </div>
