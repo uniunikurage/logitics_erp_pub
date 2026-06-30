@@ -11,7 +11,7 @@ export default function EventSupportModal() {
               <div className={s.titleTextWrapper}>
                 <p>경조비신청 상세</p>
                 <span className={s.small}>Welfare Benefit Detail</span>
-              </div>
+              </div> 
             </div>
             <div className={s.rightActions}>
               <div className={s.mainBtn}>

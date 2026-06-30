@@ -310,7 +310,7 @@ export default function Page() {
                       className={s.rankInput}
                     />
                   </span>
-                  <span></span> {/* 반차 허용 빈칸 */}
+                  <span></span>
                   <span>비고</span>
                 </li>
               </ul>

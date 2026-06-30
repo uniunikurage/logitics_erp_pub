@@ -1,0 +1,101 @@
+.contentContainer {
+  width: 700px;
+  height: 478px;
+  background-color: #f8fafc;
+}
+
+.mainHeader {
+  width: 700px;
+  height: 54px;
+  background-color: #1b3a6b;
+  display: flex;
+  color: white;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.print {
+  background-color: #2d5f9e;
+  color: #93c5fd;
+  width: 65px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  gap: 8px;
+  display: flex;
+  font-size: 12px;
+  margin-left: 360px;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  background-color: #2d5f9e;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+.mainText {
+  padding-left: 50px;
+}
+
+.yearText {
+  margin-left: 10px;
+  font-size: 11px;
+  width: 78px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #2d5f9e;
+  color: #93c5fd;
+  display: Flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 76px;
+  height: 88px;
+  border-radius: 8px;
+  background-color: #e2e8f0;
+  margin-top: 16px;
+  margin-left: 18px;
+}
+
+.change {
+  margin-top: 6px;
+  margin-left: 28px;
+  width: 55px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  font-size: 11px;
+  border-radius: 6px;
+}
+
+/* 부모 상자: 항목들을 위에서 아래로 세로 한 줄로 나열 */
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 가로선이 쭉 길어지게 설정 */
+  border-top: 1px solid #e5e7eb; /* 맨 위 가로선 */
+  border-bottom: 1px solid #e5e7eb; /* 맨 아래 가로선 */
+}
+
+/* 개별 항목 상자: 상자 자체는 세로로 나열되지만 내부 글자는 가로로 정렬해 세로선을 만듭니다 */
+.contentItem {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px; /* 상자 안쪽 여백 (위아래 여백으로 높이 조절) */
+}
+
+/* 항목과 항목 사이의 중간 가로선 (쭉 길게 늘어남) */
+.contentItem:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 왼쪽 글자 (사원번호, 부서, 휴대폰) */
+.contentItem span:first-child {
+  font-weight: 600;
+  color: #374151;
+  width: 90px; /* 세로선 위치를 일렬로 맞추기 위한 고정폭 */
+}

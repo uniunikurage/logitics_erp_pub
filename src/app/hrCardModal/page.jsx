@@ -146,137 +146,33 @@ export default function Page() {
   // };
 
   return (
-    <div className={`${s.container} max-w-[520px]`}>
-      <div className={s.contentContainer}>
-        <div className={s.mainContainer}>
-          <div className={s.mainHeader}>
-            <div className={s.mainTitle}>
-              <img src="/images/User Plus.png" alt="아이콘" />
-              <div className={s.titleTextWrapper}>
-                <p>인사정보등록</p>
-              </div>
-            </div>
-            <div className={s.rightActions}>
-              <div className={s.close}>
-                <img src="/images/X.png" alt="닫기" />
-              </div>
-            </div>
+    <div className={s.contentContainer}>
+      <div className={s.mainHeader}>
+        <span className={s.mainText}>인사기록카드</span>
+        <div className={s.yearText}>2025년 기준</div>
+        <button className={s.print}>인쇄</button>
+        <button className={s.close}>X</button>
+      </div>
+
+      <div className={s.mainContent}>
+        <div className={s.contentBox}>
+          <div className={s.image}></div>
+          <button className={s.change}>변경</button>
+        </div>
+        <div className={s.contentBox}>
+          <div className={s.contentItem}>
+            <span>사원번호</span>
+            <span>EMP-002</span>
           </div>
-          <div className={s.mainPage}>
-            <div className={s.optionTitle}>
-              <span className={s.EventOption}>기본정보</span>
 
-              <div className={s.row}>
-                <div className={s.inputGroup}>
-                  <label htmlFor="empNo">사원번호</label>
-                  <input type="text" id="empNo" placeholder="사원번호 입력" />
-                </div>
-                <div className={s.inputGroup}>
-                  <label htmlFor="empName">이름</label>
-                  <input type="text" id="empName" placeholder="이름 입력" />
-                </div>
-              </div>
-
-              <div className={s.row}>
-                <div className={s.inputGroup}>
-                  <label htmlFor="deptSelect">부서</label>
-                  <select id="deptSelect" className={s.selectBox}>
-                    <option value="">선택하세요</option>
-                    <option value="dev">개발팀</option>
-                  </select>
-                </div>
-                <div className={s.inputGroup}>
-                  <label htmlFor="rankSelect">직급</label>
-                  <select id="rankSelect" className={s.selectBox}>
-                    <option value="">선택하세요</option>
-                    <option value="staff">사원</option>
-                  </select>
-                </div>
-              </div>
-              <div className={s.row}>
-                <div className={s.inputGroup}>
-                  <label htmlFor="dateOfJoining">입사일</label>
-                  <input
-                    type="date"
-                    id="dateOfJoining"
-                    className={s.dateInput}
-                  />
-                </div>
-                <div className={s.inputGroup}>
-                  <label htmlFor="statusSelect">재직상태</label>
-                  <select id="statusSelect" className={s.selectBox}>
-                    <option value="active">재직</option>
-                    <option value="leave">휴직</option>
-                    <option value="retired">퇴직</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={s.row}>
-                <div className={s.inputGroup}>
-                  <label htmlFor="userPhone">휴대폰 번호</label>
-                  <input
-                    type="tel"
-                    id="userPhone"
-                    placeholder="010-0000-0000"
-                  />
-                </div>
-                <div className={s.inputGroup}>
-                  <label htmlFor="userEmail">이메일</label>
-                  <input
-                    type="email"
-                    id="userEmail"
-                    placeholder="example@email.com"
-                  />
-                </div>
-              </div>
-            </div>
-            <span className={s.EventOption}>주소</span>
-            <div className={s.inputGroup}>
-              <label htmlFor="zipCode">우편번호</label>
-              <div className={s.zipcodeField}>
-                <input
-                  type="text"
-                  id="zipCode"
-                  placeholder="우편번호"
-                  readOnly
-                />
-                <button type="button" className={s.searchZip}>
-                  <span>주소검색</span>
-                </button>
-              </div>
-            </div>
-            <div className={s.inputGroup}>
-              <label htmlFor="도로명주소">도로명주소</label>
-              <input
-                type="text"
-                id="도로명주소"
-                placeholder="주소검색 후 자동입력"
-              />
-            </div>
-            <div className={s.inputGroup}>
-              <label htmlFor="상세주소">상세주소</label>
-              <input
-                type="text"
-                id="상세주소"
-                placeholder="상세주소를 입력하세요"
-              />
-            </div>
-            <span className={s.EventOption}>비상연락처</span>
+          <div className={s.contentItem}>
+            <span>부서</span>
+            <span>인사팀</span>
           </div>
-          <div className={s.lastBox}>
-            <span className={s.lastUpdate}>
-              <span className={s.red}>*</span>
-              필수 입력 항목입니다.
-            </span>
-            <div className={s.btnBox}>
-              <button className={s.cancel}>
-                <p>취소</p>
-              </button>
-              <button className={s.closeBtn}>
-                <p>저장</p>
-              </button>
-            </div>
+
+          <div className={s.contentItem}>
+            <span>휴대폰</span>
+            <span>010-9876-5432</span>
           </div>
         </div>
       </div>

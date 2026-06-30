@@ -1,0 +1,642 @@
+.contentContainer {
+  width: 340px;
+  height: 720px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.mainHeader {
+  width: 340px;
+  height: 46px;
+  background-color: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 16px;
+}
+
+.labelGroup {
+  display: flex;
+  gap: 4px;
+}
+
+.red {
+  color: #ef4444;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.titleTextWrapper {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  gap: 220px;
+  font-size: 14px;
+  color: #1b3a6b;
+  font-weight: 700;
+}
+
+.date {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  width: 47px;
+  height: 14px;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 11px;
+}
+
+.empSelect label {
+  font-weight: bold;
+  color: #374151;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.empBox {
+  width: 308px;
+  height: 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 6px;
+  margin-left: 16px;
+}
+
+.iconBox {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 12px;
+}
+
+.iconBox span {
+  color: #1d4ed8;
+  size: 10px;
+  margin-left: 5px;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+.empName {
+  margin-top: 2px;
+}
+
+.leaveType {
+  margin-left: 16px;
+}
+
+.leaveTypeBox {
+  margin-left: 16px;
+}
+
+.leaveTypeBox ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.leaveTypeBox li {
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.leaveTypeBox li:hover {
+  background-color: #f5f5f5;
+  border-color: #b0b0b0;
+}
+
+.leaveTypeBox ul {
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.leaveTimeContainer {
+  display: flex;
+  padding-top: 20px;
+  gap: 4px;
+}
+
+.leaveTypeBox li {
+  width: calc((100% - 20px) / 3);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.leaveTypeBox li:nth-child(1) {
+  background-color: #ffffff;
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+}
+.leaveTypeBox li:nth-child(2) {
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+}
+.leaveTypeBox li:nth-child(3) {
+  background-color: #ffffff;
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+}
+.leaveTypeBox li:nth-child(4) {
+  background-color: #ffffff;
+  color: #e11d48;
+  border: 1px solid #fecaca;
+}
+.leaveTypeBox li:nth-child(5) {
+  color: #43a047;
+  border: 1px solid #16a34a;
+  background-color: #f0fdf4;
+}
+.leaveTypeBox li:nth-child(6) {
+  background-color: #ffffff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+}
+.leaveTypeBox li:nth-child(7) {
+  background-color: #ffffff;
+  color: #5e35b1;
+  border: 1px solid #ddd6fe;
+}
+.leaveTypeBox li:nth-child(8) {
+  background-color: #ffffff;
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+}
+.leaveTypeBox li:nth-child(9) {
+  color: #9ca3af;
+  font-weight: bold;
+  border: 1px solid #9ca3af;
+}
+
+.leaveType {
+  display: flex;
+  align-items: center;
+  gap: 220px;
+  font-size: 14px;
+  color: #1b3a6b;
+  font-weight: 700;
+}
+
+.느낌표상자 {
+  margin-left: 20px;
+}
+
+.느낌표 {
+  width: 308px;
+  height: 35px;
+  background-color: #fff7ed;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.느낌표 span {
+  color: #ea580c;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.timeBox {
+  width: 150px;
+  height: 38px;
+  color: #ea580c;
+  border: 1px solid #ea580c;
+  border-radius: 6px;
+}
+
+.time {
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.timeBox span {
+  display: flex;
+
+  margin-left: 12px;
+  margin-top: 7px;
+  font-weight: bold;
+}
+
+.timeWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+  margin-left: 16px;
+}
+
+.timeContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelGroup {
+  display: flex;
+  align-items: center;
+}
+
+.late {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #374151;
+  background-color: #f1f5f9;
+  width: 31px;
+  height: 16px;
+  font-size: 10px;
+  margin-left: 5px;
+  border-radius: 4px;
+}
+
+.timeWrapper label {
+  font-weight: 700;
+  color: #1b3a6b;
+  font-size: 13px;
+}
+.timeBox {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.clockOut {
+  width: 150px;
+  height: 38px;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  margin-left: 12px;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.mainText {
+  color: #374151;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.reasonSelect {
+  display: flex;
+  width: 308px;
+  height: 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+}
+
+.remarkText {
+  font-weight: bold;
+  color: #374151;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.remarksBox {
+  width: 308px;
+  height: 54px;
+  border: 1px solid #d1d5db;
+  margin-left: 20px;
+}
+
+.buttonWrapper {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+
+  width: 308px;
+  margin-top: 14px;
+  margin-left: 16px;
+}
+
+.buttonBox {
+  display: flex;
+  gap: 10px;
+}
+
+.reset {
+  width: 81px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  color: #1b3a6b;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save {
+  width: 81px;
+  height: 36px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1b3a6b;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleTextWrapper {
+  margin-left: 10px;
+}
+
+.증빙서류 {
+  color: #1b3a6b;
+  margin-left: 16px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.gray {
+  font-size: #6b7280;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.fileBox {
+  width: 308px;
+  height: 48px;
+  background-color: #f8fafc;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-left: 16px;
+}
+
+.pdf {
+  margin-left: 10px;
+  color: #374151;
+  font-size: 12px;
+  margin-right: 50px;
+}
+
+.del {
+  width: 40px;
+  height: 15px;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.add {
+  width: 59px;
+  height: 28px;
+  background-color: #ffffff;
+  border: solid 1px #d1d5db;
+  color: #374151;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btnFile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dateRangeWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.dateInputBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+  width: 308px;
+}
+
+.dateInput {
+  width: 140px;
+  height: 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #374151;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid #16a34a;
+}
+
+.dateInput:focus {
+  border-color: #1b3a6b;
+}
+
+.wave {
+  color: #374151;
+  font-size: 14px;
+  font-weight: bold;
+}
+.file {
+  margin-top: 16px;
+}
+
+.labelGroup {
+  font-size: 13px;
+  font-weight: bold;
+  color: #374151;
+  margin-left: 16px;
+}
+
+.연차구분현황 {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.all {
+  width: 98px;
+  height: 36px;
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+.all:hover {
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+}
+
+.moringHalf {
+  width: 98px;
+  height: 36px;
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.moringHalf:hover {
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+}
+
+.afternoonHalf {
+  width: 98px;
+  height: 36px;
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.afternoonHalf:hover {
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+}
+
+.연차수초록 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #10b981;
+}
+
+.연차수파랑 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.green {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.blue {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.green {
+  color: #16a34a;
+  font-size: 11px;
+}
+
+.연차수파랑 {
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.blue {
+  color: #3b82f6;
+  font-size: 11px;
+}
+
+.연차현황박스 {
+  width: 308px;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.연차현황컨테이너 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  background-color: #f0fdf4;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.mainTitleText {
+  font-size: 12px;
+  font-weight: bold;
+  color: #15803d;
+}
+
+.subTitleText {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.연차카드 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.연차수 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1b3a6b;
+}
+
+.연차라벨,
+.green,
+.blue {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 4px;
+}
