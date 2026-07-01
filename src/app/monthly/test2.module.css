@@ -70,8 +70,9 @@
   display: flex;
   flex: 1;
   width: 100%;
+  padding: 0 20px;
   background: #f1f5f9;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .Now {
@@ -155,8 +156,8 @@
 }
 
 .mainBar {
-  width: 100%;
-  padding: 0 24px 24px 24px;
+  /* width: 100%; */
+  max-width: 1190px;
 }
 
 .mainTitle span {
@@ -425,9 +426,10 @@
 
 .attendanceList li {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 40px; */
+  padding: 12px 30px;
   font-size: 12px;
   font-weight: 500;
   color: #374151;
@@ -473,7 +475,14 @@
   background-color: #fff7ed;
   border: 1px solid #fed7aa;
 }
-
+.lateText {
+  padding: 12.5px 8.5px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #ea580c;
+  background-color: #fff7ed;
+  border-right: 1px solid #fed7aa;
+}
 .employeeList li.tripText {
   font-weight: bold;
   color: #7c3aed !important;
@@ -487,12 +496,28 @@
   border: 1px solid #d1d5db;
   color: #94a3b8 !important;
 }
+.holidayText {
+  background-color: #e8edf2;
+  color: #94a3b8;
+  border-right: 1px solid #d1d5db;
+  font-weight: 700;
+  font-size: 9px;
+  padding: 12.5px 8.5px;
+}
 
 .employeeList li.annualText {
   font-weight: bold;
   color: #10b981 !important;
   background-color: #f0fdf4;
   border: 1px solid #bbf7d0;
+}
+.annualText {
+  background-color: #f0fdf4;
+  border-right: 1px solid #bbf7d0;
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 9px;
+  padding: 12.5px 8.5px;
 }
 
 .employeeList li.halfText {
@@ -537,4 +562,107 @@
   background-color: #fff1f2;
   font-weight: bold;
   color: #94a3b8;
+}
+
+.tableTitle th {
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 700;
+  background-color: #f1f5f9;
+  padding: 12px 25px;
+}
+
+.tableTitle .daysColumn {
+  font-size: 10px;
+  color: #6b7280;
+  padding: 13px 10px;
+  background-color: #f1f5f9;
+}
+.attendCountColumn {
+  width: 38px;
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  background-color: #eff6ff;
+  font-size: 10px;
+  padding: 13px 10px;
+  font-weight: 700;
+}
+.lateCountColumn {
+  width: 38px;
+  color: #ea580c;
+  background-color: #fff7ed;
+  background-color: #eff6ff;
+  font-size: 10px;
+  padding: 13px 10px;
+  font-weight: 700;
+}
+
+.holidayCountColumn {
+  width: 38px;
+  color: #16a34a;
+  background-color: #f0fdf4;
+  font-size: 10px;
+  padding: 13px 10px;
+  font-weight: 700;
+}
+.absentCountColumn {
+  width: 38px;
+  color: #e11d48;
+  background-color: #fff1f2;
+  font-size: 10px;
+  padding: 13px 10px;
+  font-weight: 700;
+}
+.tableBodyName {
+  font-size: 12px;
+  color: #111827;
+  font-weight: 700;
+  padding: 10px 19px;
+  width: 72px;
+}
+.tableBody {
+  display: flex;
+  width: 100%;
+}
+.tableBodyDept {
+  width: 72px;
+  color: #374151;
+  font-size: 11px;
+  padding: 10px 19px;
+}
+.tableBodyDay {
+  padding: 12.5px 8.5px;
+  color: #94a3b8;
+  font-size: 9px;
+  text-align: center;
+}
+.attendanceTable tbody tr {
+  background-color: #fff;
+}
+
+.tableStatusTd {
+  font-size: 11px;
+  padding: 11px 12.5px;
+  font-weight: 700;
+}
+
+.tableAttendTd {
+  background-color: #eff6ff;
+  border-right: 1px solid #bfdbfe;
+  border-left: 1px solid #bfdbfe;
+  color: #1d4ed8;
+}
+.tableLateTd {
+  background-color: #fff7ed;
+  border-right: 1px solid #fed7aa;
+  color: #ea580c;
+}
+.tableHolidayTd {
+  background-color: #f0fdf4;
+  border-right: 1px solid #bbf7d0;
+  color: #16a34a;
+}
+.tableAbsentTd {
+  background-color: #fff1f2;
+  color: #e11d48;
 }

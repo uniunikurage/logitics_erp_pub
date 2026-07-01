@@ -1,56 +1,30 @@
-import s from "./Aside.module.css"
+import s from "./Aside.module.css";
 
-export default function Aside({dummy}){
+export default function Aside({ dummy }) {
+  return (
+    <div className={s.sideBar}>
+      {dummy.map((item, idx) => (
+        <div className={s.sideContainer} key={idx}>
+          <span className={s.sideTitle}>{item.titleInfo.titleName}</span>
 
-//const dummy = [
-//        {
-//            titleInfo:{iconPath: '',titleName:' 인사정보'},
-//            submenuList: ['인사정보등록', '사원명수/인사기록카드', '인사발령등록']
-//        },
-//        {
-//            titleInfo:{iconPath: '',titleName:' 인사정보'},
-//            submenuList: ['인사정보등록', '사원명수']
-//        },
-//        {
-//            titleInfo:{iconPath: '',titleName:' 인사정보'},
-//            submenuList: ['인사정보등록', '사원명수']
-//        },
-//    ]
-
-    return(
-
-        <div className={s.sideBar}>
-
-            {dummy.map((item, idx) => (
-                <div className={s.sideContainer}>
-                    <span className={s.sideTitle}>
-                        {item.titleInfo.titleName}
-                    </span>
-                    
-                    <ul className={s.hrInfo}>
-                        {item.submenuList.map((subItem, subIdx) => (
-                            <li>{subItem}</li>
-                        ))}
-                    </ul>
-
-
-
-                </div>    
+          <ul className={s.hrInfo}>
+            {item.submenuList.map((subItem, subIdx) => (
+              <li key={subIdx}>{subItem}</li>
             ))}
-            <div className={s.sideContainer}>
-                <span className={s.sideTitle}>
-                    인사정보
-                </span>
-                
-                <ul className={s.hrInfo}>
-                    <li>인사정보등록</li>
-                    <li>사원명수/인사기록카드</li>
-                    <li>인사발령등록</li>
-                </ul>
-            </div>    
+          </ul>
+        </div>
+      ))}
+      <div className={s.sideContainer}>
+        <span className={s.sideTitle}>인사정보</span>
 
+        <ul className={s.hrInfo}>
+          <li>인사정보등록</li>
+          <li>사원명수/인사기록카드</li>
+          <li>인사발령등록</li>
+        </ul>
+      </div>
 
-            {/* <div className={s.sideContainer}>
+      {/* <div className={s.sideContainer}>
                 <span className={s.sideTitle}>
                     인사정보
                 </span>
@@ -62,8 +36,7 @@ export default function Aside({dummy}){
                 </ul>
             </div> */}
 
-
-{/* 
+      {/* 
             <div className={s.sideContainer}>
                 <span className={s.sideTitle}>
                 경조비관리
@@ -85,10 +58,6 @@ export default function Aside({dummy}){
                     <li>증명서발급</li>
                 </ul>
             </div> */}
-
-
-        </div>
-
-
-    )
+    </div>
+  );
 }

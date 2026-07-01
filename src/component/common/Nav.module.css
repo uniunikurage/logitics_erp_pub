@@ -23,6 +23,9 @@
   gap: 44px;
   color: #93c5fd;
 }
+.menuWrapper li {
+  cursor: pointer;
+}
 
 .right {
   display: flex;

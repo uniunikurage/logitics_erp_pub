@@ -8,6 +8,38 @@ import Aside from "@/component/common/Aside";
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
 
+const 출근더미데이터 = [
+  "출",
+  "출",
+  "지",
+  "출",
+  "휴",
+  "휴",
+  "출",
+  "연",
+  "출",
+  "출",
+  "장",
+  "휴",
+  "휴",
+  "출",
+  "출",
+  "출",
+  "출",
+  "휴",
+  "휴",
+  "출",
+  "반",
+  "출",
+  "출",
+  "출",
+  "휴",
+  "휴",
+  "출",
+  "출",
+  "출",
+  "출",
+];
 export default function Page() {
   const [employees, setEmployees] = useState();
   const [applyInfo, setApplyInfo] = useState();
@@ -145,6 +177,19 @@ export default function Page() {
     getEmployee();
   }, []);
 
+  const getDayClass = (item) => {
+    switch (item) {
+      case "지":
+        return s.lateText;
+      case "연":
+        return s.annualText;
+      case "휴":
+        return s.holidayText;
+      default:
+        return s.tableBodyDay;
+    }
+  };
+
   return (
     <div className={s.container}>
       <Nav />
@@ -265,46 +310,76 @@ export default function Page() {
               <p>2026년 6월 근태현황</p>
             </div>
             <div className={s.attendanceList}>
-              <ul>
-                <li>성명</li>
-                <li>부서</li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>출근</li>
-                <li>지각</li>
-                <li>연차</li>
-                <li>결근</li>
-              </ul>
+              <table className={s.attendanceTable}>
+                <thead>
+                  <tr className={s.tableTitle}>
+                    <th className={s.tableName}>성명</th>
+                    <th className={s.tableDept}>부서</th>
+                    {[
+                      Array.from({ length: 30 }, (item, idx) => (
+                        <>
+                          <td className={s.daysColumn}>{idx + 1}</td>
+                        </>
+                      )),
+                    ]}
+                    <td className={s.attendCountColumn}>출근</td>
+                    <td className={s.lateCountColumn}>지각</td>
+                    <td className={s.holidayCountColumn}>연차</td>
+                    <td className={s.absentCountColumn}>결근</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className={`${s.tableName} ${s.tableBodyName}`}>
+                      김철수
+                    </td>
+                    <td className={`${s.tableDept} ${s.tableBodyDept}`}>
+                      인사팀
+                    </td>
+                    {출근더미데이터.map((item, idx) => (
+                      <td key={idx} className={getDayClass(item)}>
+                        {item}
+                      </td>
+                    ))}
+                    <td className={`${s.tableStatusTd} ${s.tableAttendTd}`}>
+                      20
+                    </td>
+                    <td className={`${s.tableStatusTd} ${s.tableLateTd}`}>5</td>
+                    <td className={`${s.tableStatusTd} ${s.tableHolidayTd}`}>
+                      2
+                    </td>
+                    <td className={`${s.tableStatusTd} ${s.tableAbsentTd}`}>
+                      0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={`${s.tableName} ${s.tableBodyName}`}>
+                      김철수
+                    </td>
+                    <td className={`${s.tableDept} ${s.tableBodyDept}`}>
+                      인사팀
+                    </td>
+                    {출근더미데이터.map((item, idx) => (
+                      <td key={idx} className={getDayClass(item)}>
+                        {item}
+                      </td>
+                    ))}
+                    <td className={`${s.tableStatusTd} ${s.tableAttendTd}`}>
+                      20
+                    </td>
+                    <td className={`${s.tableStatusTd} ${s.tableLateTd}`}>5</td>
+                    <td className={`${s.tableStatusTd} ${s.tableHolidayTd}`}>
+                      2
+                    </td>
+                    <td className={`${s.tableStatusTd} ${s.tableAbsentTd}`}>
+                      0
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div className={s.employeeList}>
+
+            {/* <div className={s.employeeList}>
               <ul>
                 <li>김철수</li>
                 <li>인사팀</li>
@@ -383,7 +458,7 @@ export default function Page() {
                 <li>1</li>
                 <li></li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
